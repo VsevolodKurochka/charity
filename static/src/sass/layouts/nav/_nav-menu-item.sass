@@ -1,6 +1,8 @@
 +b('nav')
 	+e("menu")
-		+ee("item")
+		
+		li
+			
 			display: block
 
 			+transition()
@@ -10,14 +12,14 @@
 				position: relative
 				color: inherit
 				text-decoration: none
+				+font('bl')
+				color: $color-brand-2
 
 			+max(md)
 				margin-bottom: 10px
 
 				a
 					padding: 10px 15px
-					color: $color-white
-
 
 			+min(md)
 				display: inline-block
@@ -27,7 +29,6 @@
 					margin-right: 15px
 
 				a
-					padding-top: 7.5px
-					padding-bottom: 7.5px
+					+padding-y(7.5px)
 
 					+linkEffect3

@@ -17,6 +17,9 @@ if ( ! class_exists( 'Timber' ) ) {
 	return;
 }
 
+show_admin_bar( false );
+
+
 Timber::$dirname = array('templates', 'views');
 
 class StarterSite extends TimberSite {
@@ -25,6 +28,8 @@ class StarterSite extends TimberSite {
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'menus' );
+		add_theme_support( 'custom-logo' );
+		
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
@@ -32,6 +37,8 @@ class StarterSite extends TimberSite {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
+		add_filter('upload_mimes', array($this, 'cc_mime_types'));
+
 
 		$this->generate_menu();
 
@@ -63,6 +70,11 @@ class StarterSite extends TimberSite {
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 		$twig->addFilter('myfoo', new Twig_SimpleFilter('myfoo', array($this, 'myfoo')));
 		return $twig;
+	}
+
+	function cc_mime_types($mimes) {
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
 	}
 
 
