@@ -4,8 +4,8 @@
  */
 
 const folders = {
-	build: 'build',
-	src: 'src'
+	build: 'static/build',
+	src: 'static/src'
 };
 
 

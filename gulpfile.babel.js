@@ -25,19 +25,13 @@ gulp.task(
 	gulp.parallel(
 		serve,
 		'sass',
-		'templates',
 		'scripts',
 		'concat',
-		//'webpack',
-		//'bundle-modules',
 		'image',
 		'fonts',
 		'sass:watch',
-		'templates:watch',
 		'scripts:watch',
 		'concat:watch',
-		//'webpack:watch',
-		//'bundle-modules:watch',
 		'image:watch',
 		'fonts:watch'
 	)

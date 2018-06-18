@@ -30,6 +30,11 @@ class StarterSite extends TimberSite {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
+
+		$this->generate_menu();
+
 		parent::__construct();
 	}
 
@@ -42,10 +47,8 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
-		$context['foo'] = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
-		$context['menu'] = new TimberMenu();
+		$context['menu'] = new TimberMenu('menu-1');
+		$context['menu_footer'] = new TimberMenu('menu-2');
 		$context['site'] = $this;
 		return $context;
 	}
@@ -60,6 +63,27 @@ class StarterSite extends TimberSite {
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 		$twig->addFilter('myfoo', new Twig_SimpleFilter('myfoo', array($this, 'myfoo')));
 		return $twig;
+	}
+
+
+	function register_scripts() {
+		wp_enqueue_style( 'css-style', get_stylesheet_uri() );
+
+		wp_enqueue_style( 'css-main', get_template_directory_uri() . '/static/build/css/style.css' );
+
+		wp_enqueue_script( 'js-libs', get_template_directory_uri() . '/static/build/js/libs.min.js', array(), '20151215', true );
+
+		wp_enqueue_script( 'js-jquery', get_template_directory_uri() . '/static/build/js/jquery.main.js', array(), '20151215', true );
+
+		wp_enqueue_script( 'js-vanilla-scripts', get_template_directory_uri() . '/static/build/js/vanilla.main.js', array(), '20151215', true );
+	}
+
+	function generate_menu() {
+		add_theme_support( 'menus' );
+		register_nav_menus( array(
+			'menu-1' => esc_html__( 'Меню в шапке', 'charity' ),
+			'menu-2' => esc_html__( 'Меню в футере', 'charity' )
+		) );
 	}
 
 }
