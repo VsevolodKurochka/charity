@@ -1,3 +1,11 @@
+=font($type)
+  @if $type == 'l'
+    font-family: 'ProximaLight'
+  @elseif $type == 'b'
+    font-family: 'ProximaBold'
+  @elseif $type == 'bl'
+    font-family: 'ProximaBlack'
+    
 /// Get font-size from map
 /// @access public
 /// @param {String} $fs-map - font-size

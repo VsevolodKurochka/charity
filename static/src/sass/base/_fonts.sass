@@ -11,13 +11,7 @@
     .#{$font}
       font-family: $font
 
-=font($type)
-  @if $type == 'l'
-    font-family: 'ProximaLight'
-  @elseif $type == 'b'
-    font-family: 'ProximaBold'
-  @elseif $type == 'bl'
-    font-family: 'ProximaBlack'
+
 
 +connect-font('ProximaRegular', 'font-general')
 +connect-font('ProximaLight', 'font-light')

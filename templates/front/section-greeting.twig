@@ -1,16 +1,1 @@
-<section class="section greeting">
-	<div class="container">
-		<div class="row greeting__row">
-			<div class="col-12 col-md-5">
-				<div class="greeting__image">
-					<img src="{{post.get_field('section_greeting_image')}}" alt="{{post.get_field('section_greeting_title')}}">
-				</div>
-			</div>
-			<div class="col-12 col-md-7">
-				<div class="greeting__content title-md">
-					{{post.get_field('section_greeting_title')}}
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+{{siteMacros.sectionGreeting(post.get_field('section_greeting_image'), post.get_field('section_greeting_title'), 'title-md')}}

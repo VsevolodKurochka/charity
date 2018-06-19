@@ -1,0 +1,35 @@
+<section class="section mission-numbers">
+	<div class="container">
+		{{siteMacros.titleSection(post.get_field('section_numbers_title'))}}
+		<div class="row mission-numbers__row">
+			{% set i = 0 %}
+			{% for benefit in post.get_field('section_numbers_benefits') %}
+				{% set i = i + 1 %}
+				<div class="benefit col-12 col-sm-6 col-md-3 col-lg-4">
+					<div class="benefit__circle" id="circle-{{i}}"></div>
+					<div class="benefit__title">{{benefit.title}}</div>
+				</div>
+				<script>
+					document.addEventListener("DOMContentLoaded", function(){
+						Circles.create({
+						  id:                  "circle-{{i}}",
+						  radius:              100,
+						  value:               "{{benefit.number}}",
+						  maxValue:            500,
+						  width:               10,
+						  text:                function(value){return value},
+						  colors:              ['#f27935'],
+						  duration:            1000,
+						  wrpClass:            'benefit__circle-wrap',
+						  textClass:           'benefit__circle-text',
+						  valueStrokeClass:    'benefit__circle-valueStroke',
+						  maxValueStrokeClass: 'benefit__circle-maxValueStroke',
+						  styleWrapper:        true,
+						  styleText:           true
+						});
+					});
+				</script>
+			{% endfor %}
+		</div>
+	</div>
+</section>

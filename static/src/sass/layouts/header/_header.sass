@@ -1,5 +1,29 @@
 +b("header")
-  position: relative
-  z-index: z("default")
+	position: relative
+	z-index: 1
+	background-size: cover
+	background-position: center
+	color: $color-white
 
-  //@include bg('');
+	&:before
+		content: ""
+		+absolute(0, null, null, 0)
+		+size(100%)
+		background-color: transparentize($color-brand-2, 0.2)
+
+	+padding-y(45px)
+
+	+min(sm)
+		+padding-y(100px, 75px)
+
+	+min(md)
+		+padding-y(150px, 125px)
+
+	+min(lg)
+		+padding-y(200px, 150px)
+		@media only screen
+			background-attachment: fixed
+
+	&__title
+		+font('l')
+		text-transform: uppercase
