@@ -26,14 +26,19 @@
 	@extend %btn-placeholder
 
 	&_lg
-			+btn-size($btn-large-padding, $btn-large-size)
+		+btn-size($btn-large-padding, $btn-large-size)
+
+		+min(md)
+			min-width: 260px
 
 	&_shadow
+		@at-root
+			%shadow-hover
+				&:hover
+					box-shadow: none
 		&-brand-1
-			box-shadow: 0 3px 8px 1px transparentize($color-brand-1, 0.5)
-
-		&:hover
-			box-shadow: none
+			box-shadow: 0px 5px 27px 3px transparentize($color-brand-1, 0.5)
+			@extend %shadow-hover
 
 	&_nav
 		background-color: $color-responsive-menu-light

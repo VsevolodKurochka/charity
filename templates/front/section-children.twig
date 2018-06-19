@@ -1,7 +1,7 @@
 <section class="section children">
 	<div class="container">
 		{{siteMacros.titleSection(post.get_field('section_children_title'))}}
-		<div class="row">
+		<div class="row children__row">
 			{% for child in post.get_field('section_children_cases') %}
 				{{
 					siteMacros.case(
@@ -13,6 +13,9 @@
 					child.link) 
 				}}
 			{% endfor %}
+		</div>
+		<div class="text-center">
+			<a href="{{post.get_field('section_children_btn_link')}}" class="btn btn_lg btn_brand-1 btn_shadow-brand-1 effect effect_skew">{{post.get_field('section_children_btn_text')}}</a>
 		</div>
 	</div>
 </section>
