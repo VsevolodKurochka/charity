@@ -1,0 +1,76 @@
+.case
+
+	cursor: pointer
+
+	&__header
+		+relative
+		font-size: 0
+		height: 250px
+		overflow: hidden
+
+	&__image
+		+absolute(0, null, null, 0)
+		+size(100%)
+		object-fit: cover
+		transition: all ease 2s
+
+	&:hover &__image
+		transform: scale(1.2)
+
+	&__content
+		padding: 20px
+		background-color: $color-white
+
+	&__title
+		margin-bottom: 10px
+
+		line-height: 1.2
+		color: $color-brand-1
+		+font('bl')
+		font-size: 20px
+		
+		+transition
+
+		+min(md)
+			font-size: 24px
+
+	&:hover &__title
+		color: $color-brand-2
+
+	&__info
+		margin-bottom: 10px
+		color: #333333
+		font-size: 16px
+		line-height: 1.2
+
+	&__description
+		margin-bottom: 15px
+
+		+font('l')
+		font-size: 14px
+		
+		opacity: 0.8
+		
+
+	&__link
+		+relative
+		display: inline-block
+		padding-left: 40px
+		
+		text-decoration: none
+		font-size: 14px
+		+font('l')
+		color: $color-black
+
+		+transition
+
+		&:before
+			content: ""
+			+absolute(50%, null, null, 0)
+			+size(30px, 2px)
+			background-color: $color-brand-1
+			margin-top: -1px
+
+	&:hover &__link
+		transform: translateX(5px)
+		color: $color-brand-1
