@@ -1,25 +1,34 @@
 +b('nav')
 	+e("menu")
-		
+
 		li
 			
 			display: block
 
 			+transition()
 
-			a
-				display: block
-				position: relative
-				color: inherit
-				text-decoration: none
-				+font('bl')
-				color: $color-brand-2
+		a
+			display: block
+			position: relative
+			color: inherit
+			text-decoration: none
+			+font('bl')
+			color: $color-brand-2
+
+			+transition
+
+		ul > ul > li
+			+relative
 
 			+max(md)
-				margin-bottom: 10px
+				> a
+					padding: 15px
 
-				a
-					padding: 10px 15px
+				> ul
+					padding-left: 30px
+
+					a
+						padding: 10px
 
 			+min(md)
 				display: inline-block
@@ -28,7 +37,31 @@
 				&:not(:last-child)
 					margin-right: 15px
 
-				a
+				> a
 					+padding-y(7.5px)
 
-					+linkEffect3
+
+
+					//+linkEffect3
+
+				> ul
+
+					+absolute(null, null, -45px, 0)
+					opacity: 0
+					min-width: 200px
+					visibility: hidden
+					+transition
+
+					li
+						text-align: left
+
+					a
+						padding: 10px
+						background-color: $color-white
+
+						&:hover
+							background-color: darken($color-white, 3%)
+
+				&:hover > ul
+					opacity: 1
+					visibility: visible
