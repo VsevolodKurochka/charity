@@ -8,6 +8,7 @@ $post = new TimberPost();
 
 
 $context['post'] = $post;
+$context['lang'] = get_locale();
 
 Timber::render( array( 'template-front-page.twig' ), $context );
 

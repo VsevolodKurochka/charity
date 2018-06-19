@@ -47,6 +47,31 @@ class StarterSite extends TimberSite {
 
 	function register_post_types() {
 		//this is where you can register custom post types
+		register_post_type('children', array(
+			'label'  => null,
+			'labels' => array(
+				'name'               => 'Дети проекта', // основное название для типа записи
+				'singular_name'      => 'Дети проекта', // название для одной записи этого типа
+				'add_new'            => 'Добавить ребенка', // для добавления новой записи
+				'add_new_item'       => 'Добавление ребенкаа', // заголовка у вновь создаваемой записи в админ-панели.
+				'edit_item'          => 'Редактирование ребенкаа', // для редактирования типа записи
+				'new_item'           => 'Новый ребенок', // текст новой записи
+				'view_item'          => 'Смотреть ребенка', // для просмотра записи этого типа.
+				'search_items'       => 'Искать ребенка', // для поиска по этим типам записи
+				'not_found'          => 'Не найдено ребенкаа', // если в результате поиска ничего не было найдено
+				'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+				'parent_item_colon'  => '', // для родителей (у древовидных типов)
+				'menu_name'          => 'Дети проекта', // название меню
+			),
+			'description'         => '',
+			'public'              => true,
+			'hierarchical'        => false,
+			'supports'            => array('title', 'editor','thumbnail'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+			'taxonomies'          => array(),
+			'has_archive'         => false,
+			'rewrite'             => true,
+			'query_var'           => true
+		) );
 	}
 
 	function register_taxonomies() {

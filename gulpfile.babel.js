@@ -44,7 +44,6 @@ gulp.task(
 		'clean',
 		gulp.parallel(
 			'sass',
-			'templates',
 			'scripts',
 			'image',
 			'fonts'

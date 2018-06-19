@@ -1,0 +1,20 @@
+{% macro main(thumbnail, title, age, city, description, link) %}
+	<div class="case col-12 col-sm-6 col-md-3">
+		<div class="case__header">
+			<img src="{{TimberImage(thumbnail).src}}" alt="">
+		</div>
+		<div class="case__content">
+			<p class="case__title">{{title}}</p>
+			<div class="case__info">
+				<p>{{age}} {% if lang == "ru_RU" %}лет{% else %}age{% endif %}</p>
+				<p>{{city}}</p>
+			</div>
+			<div class="case__description">
+				{{description}}
+			</div>
+			<div class="case__footer">
+				<a href="{{link}}" class="case__link"></a>
+			</div>
+		</div>
+	</div>
+{% endmacro %}

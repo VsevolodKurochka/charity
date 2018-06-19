@@ -1,0 +1,43 @@
++b('greeting')
+
+	+e('row')
+
+		+min(sm)
+			align-items: center
+
+	+e('image')
+		display: inline-block
+		+relative
+
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			border-radius: 100%
+			+transition
+
+		@at-root
+
+			@keyframes greeting-image-translate
+				0%,100%
+					transform: none
+				50%
+					transform: translateY(30px)
+
+		&:before
+			top: 30px
+			left: 0
+			background-color: $color-brand-3
+			+size(75px)
+			animation: greeting-image-translate 5s ease 0s infinite
+
+		&:after
+			bottom: 30px
+			right: 0
+			background-color: lighten($color-brand-2, 50%)
+			+size(30px)
+			animation: greeting-image-translate 10s ease -5s infinite
+
+	+e('content')
+		color: $color-brand-2
+		+font('bl')

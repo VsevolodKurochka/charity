@@ -47,4 +47,17 @@ $(document).ready(function(){
 				$(".vtabs__content > div").not($(tabTarget)).fadeOut('slow');
 		});
 	// Develope
+
+	$('#motivation-slider').owlCarousel({
+    loop:true,
+    margin: 0,
+    nav: false,
+    items: 1,
+    dots: false,
+    nav: true,
+    navContainerClass: 'owl-nav container',
+    autoplay: true,
+    autoplayTimeout: 3000
+	});
+
 });	

@@ -1,0 +1,18 @@
+<section class="section children">
+	<div class="container">
+		{{siteMacros.titleSection(post.get_field('section_children_title'))}}
+		<div class="row">
+			{% for child in post.get_field('section_children_cases') %}
+				{{
+					siteMacros.case(
+					TimberImage(child.thumbnail).src,
+					child.title,
+					child.age,
+					child.city,
+					child.description,
+					child.link) 
+				}}
+			{% endfor %}
+		</div>
+	</div>
+</section>
