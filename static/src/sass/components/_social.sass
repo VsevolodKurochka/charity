@@ -1,0 +1,27 @@
+.social
+
+	list-style: none
+
+	&__item
+		display: inline-block
+		vertical-align: middle
+		&:not(:last-child)
+			margin-right: 10px
+
+	&__link
+		position: relative
+		display: inline-block
+		+size(35px)
+		background-color: $color-brand-1
+		cursor: pointer
+		text-align: center
+		line-height: 35px
+		+transition
+
+		&:hover
+			background-color: $color-brand-2
+
+	&__image
+		display: inline-block
+		vertical-align: middle
+		height: 20px

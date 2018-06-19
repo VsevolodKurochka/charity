@@ -1,2 +1,21 @@
 +b('footer')
-	font-size: 12px
+	+padding-y(30px)
+	font-size: 16px
+	background-color: #191919
+	color: #5d5d5d
+
+	+min(md)
+		+padding-y(45px)
+
+	&__column
+
+		+max(sm)
+			&:not(:last-child)
+				margin-bottom: 30px
+
+	&__logo
+		max-height: 50px
+		margin-bottom: 30px
+
+	&__place
+		margin-bottom: 20px

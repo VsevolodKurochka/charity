@@ -39,6 +39,8 @@ class StarterSite extends TimberSite {
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
 		add_filter('upload_mimes', array($this, 'cc_mime_types'));
 
+		$this->add_options_page();
+
 
 		$this->generate_menu();
 
@@ -83,6 +85,7 @@ class StarterSite extends TimberSite {
 		$context['menu_footer'] = new TimberMenu('menu-2');
 		
 		$context['site'] = $this;
+		$context['options'] = get_fields('option');
 		return $context;
 	}
 
@@ -122,6 +125,10 @@ class StarterSite extends TimberSite {
 			'menu-1' => esc_html__( 'Меню в шапке', 'charity' ),
 			'menu-2' => esc_html__( 'Меню в футере', 'charity' )
 		) );
+	}
+
+	function add_options_page() {
+		acf_add_options_page();
 	}
 
 }

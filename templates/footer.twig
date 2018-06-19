@@ -1,1 +1,36 @@
-Copyright {{"now"|date('Y')}}
+<div class="container footer__container">
+	<div class="row footer__row">
+		<div class="footer__column col-12 col-sm-4">
+			<img src="{{options.footer_logo}}" class="footer__logo" alt="Footer logo">
+			<ul class="social footer__social">
+				{% for social in options.social %}
+					<li class="social__item">
+						<a href={{social.link}} class="social__link">
+							<img class="social__image" src={{social.icon}} alt="Social link">
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="footer__column col-12 col-sm-4">
+			<div class="footer__place">{{options.address}}</div>
+			<ul class="footer__phones">
+				{% for phone in options.phones %}
+					<li>{{siteMacros.string('Тел.:', 'Ph.:')}}<a class="footer__phone" href="tel: {{phone.phone}}">{{phone.phone}}</a></li>
+				{% endfor %}
+			</ul>
+
+			<div class="footer__emails">
+				{% for email in options.emails %}
+					<a class="footer__email" href="tel: {{email.email}}">{{email.email}}</a>
+				{% endfor %}
+			</div>
+			
+		</div>
+		<div class="footer__column col-12 col-sm-4">
+			<div class="footer__menu">
+				{% include "menu.twig" with {'menu': menu_footer.get_items} %}
+			</div>
+		</div>
+	</div>
+</div>
