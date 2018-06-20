@@ -40,13 +40,9 @@
 				> a
 					+padding-y(7.5px)
 
-
-
-					//+linkEffect3
-
 				> ul
 
-					+absolute(null, null, -45px, 0)
+					+absolute(45px, null, null, 0)
 					opacity: 0
 					min-width: 200px
 					visibility: hidden
@@ -60,7 +56,8 @@
 						background-color: $color-white
 
 						&:hover
-							background-color: darken($color-white, 3%)
+							color: $color-white
+							background-color: $color-brand-2
 
 				&:hover > ul
 					opacity: 1
