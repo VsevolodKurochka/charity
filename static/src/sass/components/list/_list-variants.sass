@@ -1,9 +1,10 @@
 +b("list")
-	+m('cancel')
+	+m('rectangle')
 		li
-			padding-left: 30px
+			margin-bottom: 5px
+			padding-left: 25px
 
 			&:after
-				top: 0
-				left: 0
-				+size(37px)
+				+absolute(12px, null, null, 0)
+				+size(15px, 2px)
+				background-color: $color-brand-1

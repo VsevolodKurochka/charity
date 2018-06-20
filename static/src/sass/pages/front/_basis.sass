@@ -13,18 +13,3 @@
 		+max(sm)
 			&:not(:last-child)
 				margin-bottom: 30px
-
-		ul
-			list-style: none
-
-		li
-			+relative()
-			margin-bottom: 5px
-			padding-left: 25px
-
-			&:before
-				content: ""
-				+absolute(50%, null, null, 0)
-				transform: translateY(-50%)
-				+size(15px, 2px)
-				background-color: $color-brand-1

@@ -1,0 +1,37 @@
+.front-help
+
+	&__item
+		margin-bottom: 30px
+
+		&-content
+			margin-bottom: 20px
+		
+		&-header
+			+relative()
+			font-size: 0
+			margin-bottom: 15px
+
+		&-title
+			display: flex
+			align-items: center
+			justify-content: center
+			+absolute(null, null, 10px, 50%)
+			width: 90%
+			padding: 10px
+			transform: translateX(-50%)
+			
+			+font('bl')
+			text-align: center
+			background-color: $color-white
+			color: $color-brand-2
+			font-size: 20px
+			line-height: 1.2
+
+			min-height: 75px
+
+		&-footer
+			text-align: center
+
+		&-btn
+			font-size: 11px
+			padding: 10px

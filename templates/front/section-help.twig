@@ -1,0 +1,25 @@
+<section class="section front-help">
+	<div class="container">
+		{{siteMacros.titleSection(post.get_field('section_help_title'))}}
+		<div class="row">
+			{% for help in post.get_field('section_help_kinds') %}
+				<div class="front-help__item col-12 col-md-4">
+					<div class="front-help__item-header">
+						<img src="{{help.image}}" alt="{{help.title}}">
+						<div class="front-help__item-title">{{help.title}}</div>
+					</div>
+					<div class="front-help__item-content list list_rectangle">{{help.text}}</div>
+					<div class="front-help__item-footer">
+						{{
+							siteMacros.landingButton(
+								help.btn_link,
+								help.btn_text,
+								'front-help__item-btn effect_bounce-bottom'
+							)
+						}}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,28 @@
+<section class="front-contact">
+  <div class="front-contact__map" id="map">
+  </div>
+  <div class="front-contact__info">
+    <p class="front-contact__info-title"><span class="front-color-brand-2">LifeChanger FSU</p>
+    <div class="front-contact__info-subtitle">{{options.address}}</div>
+    <div class="front-contact__info-part front-contact__info-part_phone">
+      {% for phone in options.phones %}
+        <a class="front-contact__info-link" href="tel: {{phone.phone}}">{{phone.phone}}</a>
+      {% endfor %}
+    </div>
+    <div class="front-contact__info-part front-contact__info-part_email">
+      <a class="front-contact__info-link" href="mailto: info@osvitamarket.com ">info@osvitamarket.com</a>
+    </div>
+
+    <ul class="front-contact__info-part front-contact__info-social">
+      {% for social in options.social %}
+        <li class="front-contact__info-social-item">
+          <a href={{social.link}} class="front-contact__info-link front-contact__info-social-link">
+            <img class="front-contact__info-social-image" src="{{social.icon_color}}" alt="Social link">
+            <span class="front-contact__info-social-title">{{social.name}}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</section>

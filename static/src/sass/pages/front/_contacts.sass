@@ -1,0 +1,101 @@
++b("front-contact")
+	position: relative
+	z-index: 1
+	background-color: $color-brand-4
+
+	+max(sm)
+		margin-top: 150px
+
+	+min(sm)
+		+padding-y(200px)
+
+	&__map
+		+max(sm)
+			height: 500px
+			width: 100%
+
+		+min(sm)
+			position: absolute
+			left: 0
+			top: 0
+			+size(100%)
+
+	&__info
+		position: relative
+		z-index: 2
+		background-color: #fff
+		padding: 30px
+		+min(sm)
+			width: 450px
+			margin-left: 10%
+
+		&-title
+			+font('bl')
+			font-size: 22px
+			margin-bottom: 30px
+			line-height: 1.1
+			+min(sm)
+				font-size: 36px
+
+		&-subtitle
+			margin-bottom: 20px
+
+		&-part
+			position: relative
+			padding-left: 30px
+			
+			&:before
+				content: ""
+				position: absolute
+
+			&:not(:last-child)
+				margin-bottom: 30px
+
+			+min(sm)
+				padding-left: 70px
+
+			&_phone
+				&:before
+					top: 0
+					left: 0
+					+size(25px)
+					+bg("../img/phone.svg")
+					+min(sm)
+						+size(50px)
+
+			&_email
+				&:before
+					top: 50%
+					left: 0
+					transform: translateY(-50%)
+					+size(25px)
+					+bg("../img/email.svg")
+					+min(sm)
+						+size(46px, 41px)
+
+		&-link
+			display: block
+			text-decoration: none
+			color: $color-black
+			+font('bl')
+			+transition
+
+			&:hover
+				color: $color-brand-1
+			
+			+min(md)
+				font-size: 24px
+
+		&-social
+
+			&-item
+				+relative()
+				list-style: none
+
+				&:not(:last-child)
+					margin-bottom: 30px
+
+			&-image
+				+absolute(50%, null, null, -75px)
+				transform: translateY(-50%)
+				height: 50px
