@@ -1,0 +1,12 @@
+<section class="section front-basis">
+	<div class="container">
+		{{ siteMacros.titleSection(post.get_field('section_basis_title')) }}
+		<div class="row">
+			{% for city in post.get_field('section_basis_cities') %}
+				<div class="front-basis__list col-12 col-sm-6 col-md-3">
+					{{city.list}}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -4,14 +4,14 @@
 
 		+ee('item')
 
-			+relative
-
+			+relative()
 			background-size: cover
+			background-position: center
+			height: 400px
 
-			+min(lg)
-
+			+min(md)
 				height: 100vh
-
+				
 			+ee('info')
 				+absolute(null, null, 0, 0)
 				+padding-y(15px)
@@ -42,9 +42,16 @@
 		.owl
 
 			&-nav
+				
+				+absolute(25%, null, null, 50%)
+				transform: translateX(-50%)
 
-				+absolute(50%, null, null, 50%)
-				transform: translate(-50%, -50%)
+				+max(md)
+					width: 90%
+
+				+min(md)
+					top: 50%
+					transform: translate(-50%, -50%)
 
 			&-prev,
 			&-next
@@ -55,6 +62,7 @@
 				border: none
 				background-color: $color-brand-1
 				text-align: center
+				outline: none
 
 				+transition
 
