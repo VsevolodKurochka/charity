@@ -1,4 +1,5 @@
 {% include 'html-header.twig' %}
+{% import '_macros.twig' as siteMacros %}
 </head>
 
 	<body class="{{body_class}}" data-template="base.twig">
@@ -13,11 +14,14 @@
               	{{function('get_custom_logo')}}
               </div>
             </div>
-            <nav class="nav__menu col-12 col-md-5 col-lg-8" id="js-navigation-menu"><ul>
+            <nav class="nav__menu col-12 col-md-5 col-lg-8" id="js-navigation-menu">
               {% include "menu.twig" with {'menu': menu.get_items} %}
+              <div class="nav__menu-switcher">
+                {{language_switcher}}
+              </div>
             </nav>
             <div class="nav__addition col-5 col-md-5 col-lg-2" id="js-nav-addition">
-              <a href="#" class="btn btn_brand-1 effect effect_bounce-top nav__addition-btn">Помочь сейчас</a>
+              <a href="#" class="btn btn_brand-1 effect effect_bounce-top nav__addition-btn">{{siteMacros.string("Помочь сейчас", 'Help now')}}</a>
             </div>
           </div>
         </div>

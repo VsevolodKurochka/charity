@@ -52,8 +52,8 @@ class StarterSite extends TimberSite {
 		register_post_type('children', array(
 			'label'  => null,
 			'labels' => array(
-				'name'               => 'Дети проекта', // основное название для типа записи
-				'singular_name'      => 'Дети проекта', // название для одной записи этого типа
+				'name'               => get_locale() == 'ru_RU' ? 'Дети проекта' : 'Children of the project', // основное название для типа записи
+				'singular_name'      => get_locale() == 'ru_RU' ? 'Дети проекта' : 'Children of the project', // название для одной записи этого типа
 				'add_new'            => 'Добавить ребенка', // для добавления новой записи
 				'add_new_item'       => 'Добавление ребенкаа', // заголовка у вновь создаваемой записи в админ-панели.
 				'edit_item'          => 'Редактирование ребенкаа', // для редактирования типа записи
@@ -63,7 +63,7 @@ class StarterSite extends TimberSite {
 				'not_found'          => 'Не найдено ребенкаа', // если в результате поиска ничего не было найдено
 				'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
 				'parent_item_colon'  => '', // для родителей (у древовидных типов)
-				'menu_name'          => 'Дети проекта', // название меню
+				'menu_name'          => get_locale() == 'ru_RU' ? 'Дети проекта' : 'Children of the project', // название меню
 			),
 			'description'         => '',
 			'public'              => true,
@@ -86,6 +86,8 @@ class StarterSite extends TimberSite {
 		
 		$context['site'] = $this;
 		$context['options'] = get_fields('option');
+
+		$context['language_switcher'] = Timber::get_widgets('language_switcher');
 		return $context;
 	}
 
@@ -133,12 +135,12 @@ class StarterSite extends TimberSite {
 
 	function register_my_widgets(){
 		register_sidebar( array(
-			'name'          => 'Правая колонка "Дети проекта"',
-			'id'            => "sidebar-$i",
+			'name'          => 'Switcher',
+			'id'            => "language_switcher",
 			'description'   => '',
 			'class'         => '',
-			'before_widget' => '<li id="%1$s" class="widget %2$s">',
-			'after_widget'  => "</li>\n",
+			'before_widget' => '',
+			'after_widget'  => '',
 			'before_title'  => '<p class="widget__title">',
 			'after_title'   => "</p>\n",
 		) );

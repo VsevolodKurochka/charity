@@ -1,0 +1,9 @@
+<section class="section">
+	<div class="container">
+		<div class="row">
+			{% for partner in post.get_field('partner') %}
+				{{ siteMacros.partner(partner.image, partner.name) }}
+			{% endfor %}
+		</div>
+	</div>
+</section>

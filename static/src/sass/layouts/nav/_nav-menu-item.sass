@@ -17,7 +17,7 @@
 
 			+transition
 
-		ul > ul > li
+		> ul > li
 			+relative
 
 			+max(md)
@@ -62,3 +62,34 @@
 				&:hover > ul
 					opacity: 1
 					visibility: visible
+
+
+		> ul,
+		&-switcher
+			+min(md)
+				display: inline-block
+				vertical-align: middle
+
+		&-switcher
+
+			+min(md)
+
+				margin-left: 30px
+
+			li
+				display: inline-block
+
+				a
+					display: inline-block
+					vertical-align: middle
+
+				&:not(:last-child):after
+					content: "/"
+					display: inline-block
+					vertical-align: middle
+					color: $color-brand-1
+					+font('bl')
+					margin-left: 5px
+
+				&.active a
+					color: $color-brand-1
