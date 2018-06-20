@@ -1,9 +1,9 @@
 {% macro string(RU, EN) %}
 	{% if function('get_locale') == "ru_RU" %}{{RU}}{% else %}{{EN}}{% endif %}
 {% endmacro %}
-{% macro case(thumbnail, title, age, city, description, link) %}
+{% macro case(caseClass, thumbnail, title, age, city, description, link) %}
 	{% import _self as macros %}
-	<div class="case col-12 col-sm-6 col-md-3">
+	<div class="case {{caseClass}}">
 		<div class="case__header">
 			<img src="{{TimberImage(thumbnail).src}}" alt="{{title}}" class="case__image">
 		</div>

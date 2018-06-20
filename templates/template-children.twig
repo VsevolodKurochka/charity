@@ -1,0 +1,6 @@
+{% extends "base.twig" %}
+{% import '_macros.twig' as siteMacros %}
+{% block content %}
+	{% include 'partial/header.twig' %}
+	{% include 'children/category/children.twig' %}
+{% endblock %}

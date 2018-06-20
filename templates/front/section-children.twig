@@ -5,6 +5,7 @@
 			{% for child in post.get_field('section_children_cases') %}
 				{{
 					siteMacros.case(
+					'col-12 col-sm-6 col-md-3',
 					TimberImage(child.thumbnail).src,
 					child.title,
 					child.age,

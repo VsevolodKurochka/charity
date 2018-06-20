@@ -8,7 +8,6 @@
 		+padding-y(45px)
 
 	&__column
-
 		+max(sm)
 			&:not(:last-child)
 				margin-bottom: 30px
@@ -19,3 +18,40 @@
 
 	&__place
 		margin-bottom: 20px
+
+	@at-root
+		%footer-list
+			list-style: none
+
+			li
+				display: block
+
+			a
+				text-decoration: none
+				+transition
+
+				+font('bl')
+
+		%footer-list-links
+			a
+				color: $color-brand-1
+
+	&__phones
+		margin-bottom: 10px
+		@extend %footer-list, %footer-list-links
+
+	&__emails
+		@extend %footer-list, %footer-list-links
+
+	&__menu
+		@extend %footer-list
+
+		li
+			&:not(:last-child)
+				margin-bottom: 15px
+
+		a
+			color: #828282
+
+			&:hover
+				color: $color-brand-1

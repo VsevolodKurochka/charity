@@ -12,7 +12,7 @@
 				{% endfor %}
 			</ul>
 		</div>
-		<div class="footer__column col-12 col-sm-4">
+		<div class="footer__column col-12 col-sm-5">
 			<div class="footer__place">{{options.address}}</div>
 			<ul class="footer__phones">
 				{% for phone in options.phones %}
@@ -20,14 +20,16 @@
 				{% endfor %}
 			</ul>
 
-			<div class="footer__emails">
+			<ul class="footer__emails">
 				{% for email in options.emails %}
-					<a class="footer__email" href="tel: {{email.email}}">{{email.email}}</a>
+					<li>
+						<a class="footer__email" href="tel: {{email.email}}">{{email.email}}</a>
+					</li>
 				{% endfor %}
-			</div>
+			</ul>
 			
 		</div>
-		<div class="footer__column col-12 col-sm-4">
+		<div class="footer__column col-12 col-sm-3">
 			<div class="footer__menu">
 				{% include "menu.twig" with {'menu': menu_footer.get_items} %}
 			</div>
