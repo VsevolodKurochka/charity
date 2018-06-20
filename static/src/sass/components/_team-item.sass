@@ -1,0 +1,27 @@
+.team-item
+
+	&__content
+		+relative()
+		font-size: 0
+
+	&__image
+		object-fit: cover
+
+	&__info
+		+absolute(null, null, 10px, 50%)
+		transform: translateX(-50%)
+		width: calc(100% - 20px)
+		padding: 15px
+		background-color: #fff
+
+		text-transform: uppercase
+		text-align: center
+
+	&__name
+		font-size: 20px
+		
+		+font('bl')
+
+	&__position
+		font-size: 16px
+		opacity: 0.5

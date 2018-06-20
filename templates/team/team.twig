@@ -1,0 +1,9 @@
+<section class="section">
+	<div class="container">
+		<div class="row">
+			{% for teamItem in post.get_field('team') %}
+				{{ siteMacros.teamItem(teamItem.image, teamItem.name, teamItem.position) }}
+			{% endfor %}
+		</div>
+	</div>
+</section>

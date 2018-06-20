@@ -47,3 +47,15 @@
 		</div>
 	</section>
 {% endmacro %}
+
+{% macro teamItem(image, name, position) %}
+	<div class="team-item col-12 col-sm-6 col-md-4">
+		<div class="team-item__content">
+			<img src="{{image|resize(370,370)}}" alt="{{name}}" class="team-item__image">
+			<div class="team-item__info">
+				<p class="team-item__name">{{name}}</p>
+				<p class="team-item__position">{{position}}</p>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
