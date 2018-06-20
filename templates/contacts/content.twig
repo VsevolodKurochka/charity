@@ -1,0 +1,49 @@
+<section class="section contacts">
+	<div class="container">
+		<div class="row contacts__row">
+			<div class="col-12 col-sm-6 col-md-5 col-lg-4 contacts__info">
+				<div class="contacts__address">
+					{{options.address}}
+				</div>
+				<ul class="contacts__list">
+					{% for phone in options.phones %}
+						<li>
+							<a class="contacts__link" href="tel: {{phone.phone}}">{{phone.phone}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<ul class="contacts__list">
+					{% for email in options.emails %}
+						<li>
+							<a class="contacts__link" href="mailto: {{email.email}}">{{email.email}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<div class="contacts__item">
+					<p class="contacts__title">{{siteMacros.string('Мы в соц.сетях:', 'We are in social networks:')}}</p>
+					<ul class="social contacts__social">
+						{% for social in options.social %}
+							{{siteMacros.social(social.link, social.icon)}}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-7 col-lg-8">
+				<div class="contacts__map">
+					<iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%91%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD%D0%B0%20%D0%A5%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%2017%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000&amp;key=AIzaSyDdcnUQU0rdkIhvj3MxzWsdoFuqKMow9_8&amp;language={{siteMacros.string('ru', 'en')}}" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{% for billing in post.get_field('billing') %}
+				<div class="billing col-12 col-sm-6">
+					<div class="billing__header">
+						<img src="{{billing.icon}}" alt="{{billing.title}}" class="billing__image">
+					</div>
+					<p class="billing__title">{{billing.title}}</p>
+					<div class="billing__content">{{billing.billing}}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

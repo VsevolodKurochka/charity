@@ -1,0 +1,44 @@
+.contacts
+
+	font-size: 20px
+
+	&__row
+
+		margin-bottom: 45px
+
+		+min(sm)
+			align-items: center
+
+	&__address
+		
+		+font('bl')
+
+	&__info
+
+		> *:not(:last-child)
+
+			padding-bottom: 15px
+			margin-bottom: 15px
+			border-bottom: 1px solid #f5f5f5
+
+	&__list
+		list-style: none
+
+		li
+			&:not(:last-child)
+				margin-bottom: 10px
+
+		a
+			text-decoration: none
+			color: inherit
+			+transition
+
+			+font('b')
+			color: $color-brand-1
+
+			&:hover
+				color: $color-brand-2
+
+	&__title
+		+font('bl')
+		margin-bottom: 15px

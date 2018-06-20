@@ -1,0 +1,23 @@
+.billing
+
+	@at-root
+		%billing-center
+			text-align: center
+
+	&__header
+		margin-bottom: 15px
+		@extend %billing-center
+
+	&__image
+		height: 75px
+
+	&__title
+		margin-bottom: 15px
+		+font('bl')
+		@extend %billing-center
+
+		+min(md)
+			font-size: 20px
+
+	&__content
+		font-size: 17px

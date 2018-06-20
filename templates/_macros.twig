@@ -1,5 +1,5 @@
 {% macro string(RU, EN) %}
-	{% if function('get_locale') == "ru_RU" %}{{RU}}{% else %}{{EN}}{% endif %}
+{% if function('get_locale') == "ru_RU" %}{{RU}}{% else %}{{EN}}{% endif %}
 {% endmacro %}
 {% macro case(caseClass, thumbnail, title, age, city, description, link) %}
 	{% import _self as macros %}
@@ -58,4 +58,25 @@
 			</div>
 		</div>
 	</div>
+{% endmacro %}
+
+{% macro partner(image, name) %}
+	<div class="partner-item col-12 col-sm-6 col-md-4">
+		<div class="partner-item__inner">
+			<div class="partner-item__header">
+				<img src="{{image}}" alt="{{name}}" class="partner-item__image">
+			</div>
+			<div class="partner-item__content">
+				{{name}}
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro social(link, icon) %}
+	<li class="social__item">
+		<a href={{link}} class="social__link">
+			<img class="social__image" src={{icon}} alt="Social link">
+		</a>
+	</li>
 {% endmacro %}
