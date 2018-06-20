@@ -1,0 +1,165 @@
+.front-model
+	+min(md)
+		+margin-y(90px, 120px)
+
+	&__bg
+		font-size: 0
+
+		+min(md)
+			+absolute(null, 0, -120px, null)
+			max-width: 300px
+
+		+min(lg)
+			max-width: none
+
+	&__items
+		+relative()
+		list-style: none
+		+min(md)
+			min-height: 404px
+
+			&:before
+				content: ""
+				+absolute(0, null, null, 0)
+				+size(635px, 404px)
+				+bg('../img/quadratic.png')
+
+
+		+min(lg)
+
+			min-height: 553px
+
+			&:before
+				+size(868px, 553px)
+
+	&__step
+
+		+min(md)
+			text-align: right
+
+		&-content
+			
+			text-align: left
+
+			+min(md)
+				display: inline-flex
+				align-items: center
+
+		&-title
+			+relative()
+
+			font-size: 20px
+			+font('b')
+			color: $color-brand-2
+			line-height: 1.2
+
+			+min(md)
+				font-size: 16px
+
+			+min(lg)
+				font-size: 20px
+
+		&-number
+			+font('bl')
+			font-size: 40px
+			color: $color-white
+
+			+min(md)
+				margin-right: 35px
+				font-size: 30px
+
+			+min(lg)
+				font-size: 40px
+		
+		+min(md)
+			position: absolute
+
+			&_7
+				top: 18px
+				right: 18px
+
+			&_6
+				top: 59px
+				right: 180px
+			&_6 &
+				&-title
+					top: 45px
+
+			&_5
+				top: 140px
+				right: 315px
+			&_5 &
+				&-title
+					top: 30px
+
+			&_4
+				top: 241px
+				right: 541px
+
+			&_3
+				top: 330px
+				right: 618px
+			&_3 &
+				&-title
+					top: 45px
+
+			&_2
+				top: 434px
+				right: 658px
+			&_2 &
+				&-title
+					top: 45px
+
+			&_1
+				top: 477px
+				right: 889px
+
+			&_1 &
+				&-title
+					top: 80px
+
+		+min(lg)
+			
+			&_7
+				top: 18px
+				right: 18px
+
+			&_6
+				top: 59px
+				right: 180px
+			&_6 &
+				&-title
+					top: 45px
+
+			&_5
+				top: 140px
+				right: 315px
+			&_5 &
+				&-title
+					top: 30px
+
+			&_4
+				top: 241px
+				right: 541px
+
+			&_3
+				top: 330px
+				right: 618px
+			&_3 &
+				&-title
+					top: 45px
+
+			&_2
+				top: 434px
+				right: 658px
+			&_2 &
+				&-title
+					top: 45px
+
+			&_1
+				top: 477px
+				right: 889px
+
+			&_1 &
+				&-title
+					top: 80px

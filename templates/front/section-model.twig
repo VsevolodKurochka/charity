@@ -1,0 +1,20 @@
+<section class="section front-model">
+	<div class="front-model__bg">
+		<img src="{{post.get_field('section_model_image')}}" alt="" class="front-model__bg-image">
+	</div>
+	<div class="container">
+		{{siteMacros.titleSection(post.get_field('section_model_title'), 'front-model__title')}}
+		<ul class="front-model__items">
+			{% set i = 0 %}
+			{% for step in post.get_field('section_model_steps') %}
+				{% set i = i + 1 %}
+				<li class="front-model__step front-model__step_{{i}}">
+					<div class="front-model__step-content">
+						<div class="front-model__step-number">{{i}}</div>
+						<div class="front-model__step-title">{{step.title}}</div>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
