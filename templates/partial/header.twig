@@ -1,8 +1,17 @@
-<header class="header" style="background-image: url({{post.get_field('bg')|default(TimberImage(post.thumbnail).src)}})">
+{% if post.get_field('bg') %}
+{% set url = post.get_field('bg') %}
+{% elseif TimberImage(post.thumbnail).src %}
+{% set url = TimberImage(post.thumbnail).src %}
+{% else %}
+{% set url = "#{theme.link}/static/build/img/bg-ch1.jpg" %}
+{% endif %}
+<header class="header" style="background-image: url({{url}})">
 	<div class="container">
 		<h1 class="title-lg header__title">
 			{% if post.get_field('custom_title') %}
 				{{ post.get_field('custom_title') }}
+			{% elseif function('is_post_type_archive') %}
+				{{ function('post_type_archive_title') }}
 			{% else %}
 				{{ post.title }}
 			{% endif %}
