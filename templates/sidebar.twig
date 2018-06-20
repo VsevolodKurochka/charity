@@ -1,1 +1,13 @@
-Sidebar in Timber. Add HTML to your hearts content.
+{% import '_macros.twig' as siteMacros %}
+<aside class="sidebar">
+	<div class="sidebar__item">
+		<p class="sidebar__title">{{siteMacros.string("Другие истории", "Another Histories")}}</p>
+		<ul class="sidebar__list">
+			{% for child in children %}
+				<li>
+					<a href="{{child.link}}">{{child.title}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</aside>

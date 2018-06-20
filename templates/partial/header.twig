@@ -1,4 +1,4 @@
-<header class="header" style="background-image: url({{TimberImage(post.thumbnail).src}})">
+<header class="header" style="background-image: url({{post.get_field('bg')|default(TimberImage(post.thumbnail).src)}})">
 	<div class="container">
 		<h1 class="title-lg header__title">
 			{% if post.get_field('custom_title') %}

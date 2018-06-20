@@ -1,7 +1,7 @@
-<section class="section children">
+<section class="section front-section-children">
 	<div class="container">
 		{{siteMacros.titleSection(post.get_field('section_children_title'))}}
-		<div class="row children__row">
+		<div class="row front-section-children__row">
 			{% for child in post.get_field('section_children_cases') %}
 				{{
 					siteMacros.case(

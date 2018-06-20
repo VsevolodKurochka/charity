@@ -4,22 +4,24 @@
 {% macro case(caseClass, thumbnail, title, age, city, description, link) %}
 	{% import _self as macros %}
 	<div class="case {{caseClass}}">
-		<div class="case__header">
-			<img src="{{TimberImage(thumbnail).src}}" alt="{{title}}" class="case__image">
-		</div>
-		<div class="case__content">
-			<p class="case__title">{{title}}</p>
-			<div class="case__info">
-				<p>{{age}} {{macros.string('лет', 'age')}}</p>
-				<p>{{city}}</p>
+		<a href="{{link}}" class="case__link">
+			<div class="case__header">
+				<img src="{{TimberImage(thumbnail).src}}" alt="{{title}}" class="case__image">
 			</div>
-			<div class="case__description">
-				{{description}}
+			<div class="case__content">
+				<p class="case__title">{{title}}</p>
+				<div class="case__info">
+					<p>{{age}} {{macros.string('лет', 'age')}}</p>
+					<p>{{city}}</p>
+				</div>
+				<div class="case__description">
+					{{description}}
+				</div>
+				<div class="case__footer">
+					<span href="{{link}}" class="case__read">{{macros.string('Читать далее', 'Read more')}}</span>
+				</div>
 			</div>
-			<div class="case__footer">
-				<a href="{{link}}" class="case__link">{{macros.string('Читать далее', 'Read more')}}</a>
-			</div>
-		</div>
+		</a>
 	</div>
 {% endmacro %}
 

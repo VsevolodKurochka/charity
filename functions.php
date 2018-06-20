@@ -38,10 +38,10 @@ class StarterSite extends TimberSite {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
 		add_filter('upload_mimes', array($this, 'cc_mime_types'));
+		add_action( 'widgets_init', array($this, 'register_my_widgets') );
+
 
 		$this->add_options_page();
-
-
 		$this->generate_menu();
 
 		parent::__construct();
@@ -70,7 +70,7 @@ class StarterSite extends TimberSite {
 			'hierarchical'        => false,
 			'supports'            => array('title', 'editor','thumbnail'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 			'taxonomies'          => array(),
-			'has_archive'         => false,
+			'has_archive'         => true,
 			'rewrite'             => true,
 			'query_var'           => true
 		) );
@@ -129,6 +129,19 @@ class StarterSite extends TimberSite {
 
 	function add_options_page() {
 		acf_add_options_page();
+	}
+
+	function register_my_widgets(){
+		register_sidebar( array(
+			'name'          => 'Правая колонка "Дети проекта"',
+			'id'            => "sidebar-$i",
+			'description'   => '',
+			'class'         => '',
+			'before_widget' => '<li id="%1$s" class="widget %2$s">',
+			'after_widget'  => "</li>\n",
+			'before_title'  => '<p class="widget__title">',
+			'after_title'   => "</p>\n",
+		) );
 	}
 
 }

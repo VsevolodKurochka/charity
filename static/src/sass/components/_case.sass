@@ -1,6 +1,8 @@
 .case
-
-	cursor: pointer
+	&__link
+		cursor: pointer
+		text-decoration: none
+		color: $color-black
 
 	&__header
 		+relative
@@ -51,7 +53,7 @@
 		opacity: 0.8
 		
 
-	&__link
+	&__read
 		+relative
 		display: inline-block
 		padding-left: 40px
@@ -70,6 +72,6 @@
 			background-color: $color-brand-1
 			margin-top: -1px
 
-	&:hover &__link
+	&:hover &__read
 		transform: translateX(5px)
 		color: $color-brand-1

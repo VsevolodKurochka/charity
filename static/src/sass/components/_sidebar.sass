@@ -1,0 +1,53 @@
+.sidebar
+
+	&__item
+
+		&:not(:last-child)
+			margin-bottom: 30px
+
+	&__title
+		margin-bottom: 30px
+		color: $color-brand-2
+		+font('bl')
+		font-size: 20px
+
+		+min(sm)
+			font-size: 25px
+
+	&__list
+
+		list-style: none
+
+		li
+			margin-bottom: 5px
+
+		a
+			+relative
+			display: block
+			padding: 10px 20px
+			border-bottom: 1px solid #d0d0d0
+			text-decoration: none
+			color: $color-black
+
+			+transition 
+
+			&:hover
+				color: $color-brand-1
+				border-bottom-color: $color-brand-1
+
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				background-color: $color-brand-1
+				+size(10px, 2px)
+
+			&:before
+				top: 17px
+				left: 0px
+				transform: rotate(45deg)
+
+			&:after
+				top: 23px
+				left: 0px
+				transform: rotate(-45deg)
