@@ -80,3 +80,7 @@
 		</a>
 	</li>
 {% endmacro %}
+
+{% macro landingButton(link, text, effect) %}
+	<a href="{{link}}" class="btn btn_lg btn_brand-1 btn_shadow-brand-1 effect {{effect}}">{{text}}</a>
+{% endmacro %}

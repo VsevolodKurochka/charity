@@ -16,7 +16,13 @@
 			{% endfor %}
 		</div>
 		<div class="text-center">
-			<a href="{{post.get_field('section_children_btn_link')}}" class="btn btn_lg btn_brand-1 btn_shadow-brand-1 effect effect_skew">{{post.get_field('section_children_btn_text')}}</a>
+			{{
+				siteMacros.landingButton( 
+				post.get_field('section_children_btn_link'), 
+				post.get_field('section_children_btn_text'), 
+				'effect_skew'
+				)
+			}}
 		</div>
 	</div>
 </section>

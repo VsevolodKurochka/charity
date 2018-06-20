@@ -1,0 +1,14 @@
+<section class="section front-contrast">
+	<div class="container">
+		{{siteMacros.titleSection(post.get_field('section_contrast_title'), 'front-contrast__title')}}
+		<div class="text-center front-contrast__footer">
+			{{
+				siteMacros.landingButton( 
+				post.get_field('section_contrast_btn_link'), 
+				post.get_field('section_contrast_btn_text'),
+				'effect_bounce-top'
+				)
+			}}
+		</div>
+	</div>
+</section>
