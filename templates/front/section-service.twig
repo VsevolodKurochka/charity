@@ -1,0 +1,17 @@
+<section class="section front-service">
+	<div class="front-service__header container">
+		{{siteMacros.titleSection(post.get_field('section_service_title'), 'front-service__title' )}}
+		<h4 class="title-sm front-service__subtitle">{{post.get_field('section_service_subtitle')}}</h4>
+	</div>
+	<div class="flex front-service__items">
+		{% for service in post.get_field('section_service_plan') %}
+			<div class="front-service__item col-12 col-sm-6">
+				<div class="front-service__item-header">
+					<img src="{{service.icon}}" alt="{{service.title}}" class="front-service__item-icon">
+				</div>
+				<div class="front-service__item-title">{{service.title}}</div>
+				<div class="front-service__item-text">{{service.text}}</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>

@@ -1,0 +1,47 @@
+.front-service
+
+	&__header
+		margin-bottom: 45px
+
+		+min(md)
+			margin-bottom: 60px
+
+	&__title
+		margin-bottom: 30px
+		text-transform: uppercase
+		+font('bl')
+
+	&__subtitle
+		+margin-x(auto)
+		max-width: 700px
+
+		+font('b')
+		color: #7d95ad
+		text-align: center
+
+
+	&__items
+		+min(sm)
+			justify-content: center
+
+	&__item
+
+		text-align: center
+
+		+min(md)
+			flex-basis: 20%
+
+		&-header
+			margin-bottom: 15px
+
+		&-icon
+			height: 80px
+
+		&-title
+			margin-bottom: 15px
+			+font('bl')
+			color: $color-brand-2
+
+		&-text
+			font-size: 14px
+			opacity: 0.8
