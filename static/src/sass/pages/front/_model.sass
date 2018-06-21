@@ -1,8 +1,12 @@
 .front-model
-	+margin-y(90px, 150px)
+	+margin-y(90px, -70px)
+	overflow: hidden
+
+	+min(md)
+		padding-bottom: 150px
 
 	&__bg
-		+absolute(null, 0, -150px, null)
+		+absolute(null, 0, 0, null)
 		text-align: right
 		font-size: 0
 
@@ -31,7 +35,7 @@
 
 			&:before
 				content: ""
-				+absolute(0, null, null, 0)
+				+absolute(0, null, null, -15px)
 				+size(730px, 465px)
 				+bg('../img/quadratic.png')
 
@@ -47,9 +51,6 @@
 
 		&:not(:last-child)
 			margin-bottom: 30px
-
-		+min(md)
-			text-align: right
 
 		&-content
 			
@@ -90,92 +91,95 @@
 		
 		+min(md)
 			position: absolute
+			min-width: 300px
 
 			&_7
 				top: 17px
-				right: 2px
+				right: -36px
 
 			&_6
-				top: 52px
-				right: 138px
+				top: 54px
+				right: 102px
 			&_6 &
 				&-title
 					top: 45px
 
 			&_5
-				top: 122px
-				right: 252px
+				top: 123px
+				right: 217px
 			&_5 &
 				&-title
 					top: 30px
 
 			&_4
-				top: 207px
-				right: 439px
+				top: 209px
+				right: 320px
 
 			&_3
 				top: 280px
-				right: 504px
+				right: 424px
 			&_3 &
 				&-title
 					top: 45px
 
 			&_2
-				top: 368px
-				right: 540px
+				top: 370px
+				right: 533px
 			&_2 &
 				&-title
 					top: 45px
 
 			&_1
 				top: 405px
-				right: 730px
+				right: 633px
 
 			&_1 &
 				&-title
 					top: 80px
 
 		+min(lg)
+
+			min-width: 400px
 			
 			&_7
 				top: 18px
-				right: 18px
+				right: -65px
 
 			&_6
 				top: 63px
-				right: 180px
+				right: 99px
 			&_6 &
 				&-title
 					top: 45px
 
 			&_5
 				top: 145px
-				right: 315px
+				right: 236px
 			&_5 &
 				&-title
 					top: 30px
 
 			&_4
 				top: 246px
-				right: 542px
+				right: 358px
 
 			&_3
 				top: 330px
-				right: 618px
+				right: 482px
 			&_3 &
 				&-title
 					top: 45px
 
 			&_2
 				top: 438px
-				right: 657px
+				right: 611px
 			&_2 &
 				&-title
 					top: 45px
 
 			&_1
 				top: 481px
-				right: 889px
+				right: 731px
 
 			&_1 &
 				&-title
