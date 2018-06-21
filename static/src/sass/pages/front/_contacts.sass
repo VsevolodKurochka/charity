@@ -3,9 +3,6 @@
 	z-index: 1
 	background-color: $color-brand-4
 
-	+max(sm)
-		margin-top: 150px
-
 	+min(sm)
 		+padding-y(200px)
 
@@ -42,7 +39,7 @@
 
 		&-part
 			position: relative
-			padding-left: 30px
+			padding-left: 40px
 			
 			&:before
 				content: ""
@@ -96,6 +93,10 @@
 					margin-bottom: 30px
 
 			&-image
-				+absolute(50%, null, null, -75px)
+				+absolute(50%, null, null, -40px)
 				transform: translateY(-50%)
-				height: 50px
+				height: 25px
+
+				+min(sm)
+					height: 50px
+					left: -75px
