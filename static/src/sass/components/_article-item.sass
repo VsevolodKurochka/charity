@@ -1,0 +1,63 @@
+.article-item
+
+	margin-bottom: 40px
+
+	&__link
+		text-decoration: none
+		color: $color-black
+
+		+transition()
+
+		+min(sm)
+			display: flex
+
+	&__image
+
+		+transition()
+		+size(100%)
+		object-fit: cover
+
+		&-wrapper
+			+relative()
+			max-width: 370px
+			max-height: 170px
+			overflow: hidden
+
+	&__title
+		margin-bottom: 15px
+
+		+font('bl')
+		+transition()
+
+		font-size: 21px
+
+	&__info
+		margin-bottom: 15px
+		color: #797979
+		font-size: 12px
+		+font('l')
+
+		> span
+			+relative()
+
+			&:not(:last-child)
+				margin-right: 10px
+
+				&:after
+					content: "|"
+					display: inline-block
+					vertical-align: middle
+					margin-left: 10px
+
+	&__description
+		color: #797979
+		font-size: 15px	
+
+	&:hover &
+
+		&__image
+
+			transform: scale(1.2)
+
+		&__title
+			color: $color-brand-1

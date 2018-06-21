@@ -144,6 +144,17 @@ class StarterSite extends TimberSite {
 			'before_title'  => '<p class="widget__title">',
 			'after_title'   => "</p>\n",
 		) );
+
+		register_sidebar( array(
+			'name'          => 'Blog sidebar',
+			'id'            => "blog_sidebar",
+			'description'   => '',
+			'class'         => '',
+			'before_widget' => '<div class="sidebar">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<p class="sidebar__title">',
+			'after_title'   => "</p>\n",
+		) );
 	}
 
 }

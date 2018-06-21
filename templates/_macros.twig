@@ -84,3 +84,32 @@
 {% macro landingButton(link, text, effect) %}
 	<a href="{{link}}" class="btn btn_lg btn_brand-1 btn_shadow-brand-1 effect {{effect}}">{{text}}</a>
 {% endmacro %}
+
+{% macro article(article, thumbnailDefault) %}
+	{% import _self as macros %}
+	{% if article.thumbnail.src %}
+		{% set url = article.thumbnail.src|resize(370, 170) %}
+	{% else %}
+		{% set url = thumbnailDefault %}
+	{% endif %}
+	<article class="article-item">
+		<a href="{{article.link}}" class="article-item__link row">
+			<div class="article-item__header col-12 col-sm-5">
+				
+				<div class="article-item__image-wrapper">
+					<img src="{{url}}" alt="{{title}}" class="article-item__image">
+				</div>
+			</div>
+			<div class="article-item__body col-12 col-sm-7">
+				<p class="article-item__title">{{article.title}}</p>
+				<div class="article-item__info">
+					<span class="article-item__categories">{% for category in article.categories %}{{category}}{% endfor %}</span>
+					<span class="article-item__date">{{ article.post_date|date('F j, Y') }}</span>
+				</div>
+				<div class="article-item__description">
+					{{article.preview.read_more('').end('').length(20)}}
+				</div>
+			</div>
+		</a>
+	</article>
+{% endmacro %}

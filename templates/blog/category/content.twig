@@ -1,0 +1,22 @@
+<section class="section blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-9">
+				<div class="blog__content">
+					{% for article in blog %}
+						{{
+							siteMacros.article(
+								article,
+								"#{theme.link}/static/build/img/bg-ch1.jpg"
+							)
+						}}
+					{% endfor %}
+				</div>
+				{% include 'partial/pagination-blog.twig' %}
+			</div>
+			<div class="col-12 col-md-3">
+				{{ sidebar }}
+			</div>
+		</div>
+	</div>
+</section>
