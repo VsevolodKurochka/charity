@@ -1,14 +1,16 @@
 <section class="section front-contrast">
 	<div class="container">
 		{{siteMacros.titleSection(post.get_field('section_contrast_title'), 'front-contrast__title')}}
+		<div class="front-contrast__content" id="front-contrast-content">
+			{{post.get_field('section_contrast_text')}}
+		</div>
 		<div class="text-center front-contrast__footer">
-			{{
-				siteMacros.landingButton( 
-				post.get_field('section_contrast_btn_link'), 
-				post.get_field('section_contrast_btn_text'),
-				'effect_bounce-top'
-				)
-			}}
+			<button 
+			class="btn btn_lg btn_brand-1 btn_shadow-brand-1 effect effect_bounce-top js-front-contrast-button" 
+			data-toggle="front-contrast-content"
+			data-open-text="{{post.get_field('section_contrast_btn_text_open')}}"
+			data-close-text="{{post.get_field('section_contrast_btn_text_close')}}"
+			>{{post.get_field('section_contrast_btn_text_open')}}</button>
 		</div>
 	</div>
 </section>
