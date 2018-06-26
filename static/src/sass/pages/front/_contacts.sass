@@ -39,36 +39,25 @@
 
 		&-part
 			position: relative
-			padding-left: 40px
+			padding-left: 45px
 			
 			&:before
 				content: ""
-				position: absolute
+				+absolute(50%, null, null, 0)
+				transform: translateY(-50%)
 
 			&:not(:last-child)
 				margin-bottom: 30px
 
-			+min(sm)
-				padding-left: 70px
-
 			&_phone
 				&:before
-					top: 0
-					left: 0
 					+size(25px)
 					+bg("../img/phone.svg")
-					+min(sm)
-						+size(50px)
 
 			&_email
 				&:before
-					top: 50%
-					left: 0
-					transform: translateY(-50%)
 					+size(25px)
 					+bg("../img/email.svg")
-					+min(sm)
-						+size(46px, 41px)
 
 		&-link
 			display: block
@@ -93,10 +82,6 @@
 					margin-bottom: 30px
 
 			&-image
-				+absolute(50%, null, null, -40px)
+				+absolute(50%, null, null, -47px)
 				transform: translateY(-50%)
-				height: 25px
-
-				+min(sm)
-					height: 50px
-					left: -75px
+				height: 27px
