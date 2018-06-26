@@ -12,7 +12,7 @@
 			<div class="footer__place">{{options.address}}</div>
 			<ul class="footer__phones">
 				{% for phone in options.phones %}
-					<li>{{siteMacros.string('Тел.:', 'Ph.:')}}<a class="footer__phone" href="tel: {{phone.phone}}">{{phone.phone}}</a></li>
+					<li>{{siteMacros.string('Тел.: ', 'Ph.: ')}}<a class="footer__phone" href="tel: {{phone.phone}}">{{phone.phone}}</a></li>
 				{% endfor %}
 			</ul>
 

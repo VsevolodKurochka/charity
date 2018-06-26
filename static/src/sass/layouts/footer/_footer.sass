@@ -1,8 +1,8 @@
 +b('footer')
 	+padding-y(30px)
 	font-size: 16px
-	background-color: #191919
-	color: #5d5d5d
+	background-color: $color-brand-2
+	color: $color-white
 
 	+min(md)
 		+padding-y(45px)
@@ -30,7 +30,7 @@
 				text-decoration: none
 				+transition
 
-				+font('bl')
+				+font('b')
 
 		%footer-list-links
 			a
@@ -51,7 +51,7 @@
 				margin-bottom: 15px
 
 		a
-			color: #828282
+			color: transparentize($color-white, 0.4)
 
 			&:hover
 				color: $color-brand-1

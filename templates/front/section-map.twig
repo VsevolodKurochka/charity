@@ -10,7 +10,9 @@
       {% endfor %}
     </div>
     <div class="front-contact__info-part front-contact__info-part_email">
-      <a class="front-contact__info-link" href="mailto: info@osvitamarket.com ">info@osvitamarket.com</a>
+      {% for email in options.emails %}
+        <a class="front-contact__info-link" href="mailto: {{email.email}}">{{email.email}}</a>
+      {% endfor %}
     </div>
 
     <ul class="front-contact__info-part front-contact__info-social">

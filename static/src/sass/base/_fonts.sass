@@ -1,19 +1,14 @@
 // Connect fonts
-=connect-font($font, $class_name: $font, $fileType: otf)
-  @font-face
-    font-family: $font
-    src: local("#{$font}"), url(../fonts/#{$font}.#{$fileType})
+@font-face
+	font-family: 'Helvetica Neue Cyr Roman'
+	src: url('../fonts/HelveticaNeueCyr-Roman.eot')
+	src: url('../fonts/HelveticaNeueCyr-Roman.eot?#iefix') format("embedded-opentype"), url('../fonts/HelveticaNeueCyr-Roman.woff') format("woff"), url('../fonts/HelveticaNeueCyr-Roman.ttf') format("truetype")
+	font-weight: normal
+	font-style: normal
 
-  @if $class_name != null
-    .#{$class_name}
-      font-family: $font
-  @else
-    .#{$font}
-      font-family: $font
-
-
-
-+connect-font('ProximaRegular', 'font-general')
-+connect-font('ProximaLight', 'font-light')
-+connect-font('ProximaBold', 'font-bold')
-+connect-font('ProximaBlack', 'font-black')
+@font-face
+	font-family: 'Helvetica Neue Cyr Bold'
+	src: url('../fonts/HelveticaNeueCyr-Bold.eot')
+	src: url('../fonts/HelveticaNeueCyr-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/HelveticaNeueCyr-Bold.woff') format("woff"), url('../fonts/HelveticaNeueCyr-Bold.ttf') format("truetype")
+	font-weight: normal
+	font-style: normal
