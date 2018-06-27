@@ -96,11 +96,35 @@ function charity_register_required_plugins() {
 		),
 
 		array(
+			'name'               => 'qTranslate support for GravityForms', // The plugin name.
+			'slug'               => 'qtranslate-support-for-gravityforms', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/tgm/plugins/qtranslate-support-for-gravityforms.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '1.1.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+
+		array(
 			'name'               => 'ACF qTranslate', // The plugin name.
 			'slug'               => 'acf-qtranslate', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/tgm/plugins/acf-qtranslate.1.7.23.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'            => '1.7.23', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+		),
+
+		array(
+			'name'               => 'Gravity Forms', // The plugin name.
+			'slug'               => 'gravityforms', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/tgm/plugins/gravityforms_2.3.2.10.zip', // The plugin source.
+			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '2.3.2.10', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => '', // If set, overrides default API URL and points to an external URL.

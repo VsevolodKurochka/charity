@@ -1,0 +1,21 @@
+{% if TimberImage(post.thumbnail).src %}
+	{% set url = TimberImage(post.thumbnail).src %}
+{% else %}
+	{% set url = "#{theme.link}/static/build/img/bg-ch1.jpg" %}
+{% endif %}
+<section class="payment" style="background-image: url({{url}})">
+	<div class="container">
+		<div class="row payment__row">
+			<div class="col-12 col-sm-10 col-md-8 col-lg-6">
+				<div class="payment__content">
+					<div class="payment__content-header">
+						{{post.content}}
+					</div>
+					<div class="payment__content-body">{{
+						function('do_shortcode', '[gravityform id='"#{post.get_field('shortcode_id')}"' title="false" description="false" ajax="true"]')
+					}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
