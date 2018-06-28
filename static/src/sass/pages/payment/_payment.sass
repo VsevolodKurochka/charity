@@ -49,8 +49,9 @@
 					+font('r')
 					color: #848484
 
-			.gfield_price label
+			.gfield_price label.gfield_label
 				font-weight: normal
+				font-size: 16px
 				+font('b')
 			
 			.gform_wrapper span.ginput_total,
@@ -70,10 +71,15 @@
 				padding: 15px 30px
 				cursor: pointer
 				margin-right: 5px
+				border: none
+				text-transform: uppercase
+				+font('pb')
 			
 			.gform_wrapper .gform_page_footer
 				border-top: none
-
+			
+			.gform_wrapper li.gfield_error ul.gfield_radio
+				color: #ff0000;
 			.gform_wrapper div.validation_error
 				color: #ff0000;
 				font-size: 14px;

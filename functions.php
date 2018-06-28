@@ -27,6 +27,7 @@ class StarterSite extends TimberSite {
 	function __construct() {
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'small-admin-images', 50, 50, true );
 		add_theme_support( 'menus' );
 		add_theme_support( 'custom-logo' );
 		
