@@ -3,7 +3,13 @@
 		<div class="row">
 			<div class="col-12 col-md-9">
 				<article class="article {{post.class}}" id="{{post.id}}">
-					{{post.content}}
+					<div class="article__content">
+						{{post.content}}
+					</div>
+					<div class="article__footer">
+						<p class="article__footer-title">{{siteMacros.string('Поделитесь записью', 'Share the post')}}</p>
+						{{siteMacros.shareButton(post.link)}}
+					</div>
 				</article>
 			</div>
 			<div class="col-12 col-md-3">

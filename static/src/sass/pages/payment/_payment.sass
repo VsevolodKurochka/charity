@@ -3,6 +3,7 @@
 
 	+min(sm)
 		background-attachment: fixed
+		background-position: 0
 	
 	&__content
 		padding: 60px 15px
@@ -62,8 +63,9 @@
 			.ginput_product_price_label,
 			.ginput_quantity_label
 				font-size: 14px
-
-			.gform_wrapper .gform_page_footer .button
+			
+			.gform_wrapper .gform_page_footer .button,
+			.gform_wrapper .gform_footer .button
 				background-color: $color-brand-1
 				color: $color-white
 				font-size: 15px
@@ -73,9 +75,10 @@
 				margin-right: 5px
 				border: none
 				text-transform: uppercase
-				+font('pb')
+				+font('b')
 			
-			.gform_wrapper .gform_page_footer
+			.gform_wrapper .gform_page_footer,
+			.gform_wrapper .gform_footer
 				border-top: none
 			
 			.gform_wrapper li.gfield_error ul.gfield_radio

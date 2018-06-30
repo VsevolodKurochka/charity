@@ -5,16 +5,22 @@
 {% else %}
 {% set url = "#{theme.link}/static/build/img/bg-ch1.jpg" %}
 {% endif %}
+
+{% if post.get_field('custom_title') %}
+	{% set title = post.get_field('custom_title') %}
+{% elseif function('is_post_type_archive') %}
+	{% set title = function('post_type_archive_title') %}
+{% else %}
+	{% set title = post.title %}
+{% endif %}
+
+{% if function('is_single') %}
+	{% set titleClass = 'title-md' %}
+{% else %}
+	{% set titleClass = 'title-lg' %}
+{% endif %}
 <header class="header" style="background-image: url({{url}})">
 	<div class="container">
-		<h1 class="title-lg header__title">
-			{% if post.get_field('custom_title') %}
-				{{ post.get_field('custom_title') }}
-			{% elseif function('is_post_type_archive') %}
-				{{ function('post_type_archive_title') }}
-			{% else %}
-				{{ post.title }}
-			{% endif %}
-	</h1>
+		<h1 class="{{titleClass}} header__title">{{title}}</h1>
 	</div>
 </header>

@@ -1,0 +1,23 @@
+.partner
+
+	&__slider
+		
+		&-dots
+			margin-top: 30px
+			text-align: center
+
+		&-dot
+			display: inline-block
+			vertical-align: middle
+			+size(20px)
+			border: none
+			border-radius: 100%
+			background-color: lighten($color-black, 25%)
+			outline: none
+			+transition()
+
+			&.active
+				background-color: $color-brand-1
+
+			&:not(:last-child)
+				margin-right: 10px

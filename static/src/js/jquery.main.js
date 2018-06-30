@@ -12,15 +12,36 @@ jQuery(document).ready(function($){
 	});
 
 	$('#motivation-slider').owlCarousel({
-    loop:true,
-    margin: 0,
-    nav: false,
-    items: 1,
-    dots: false,
-    nav: true,
-    navContainerClass: 'owl-nav container',
-    autoplay: true,
-    autoplayTimeout: 3000
+	loop:true,
+	margin: 0,
+	nav: false,
+	items: 1,
+	dots: false,
+	nav: true,
+	navContainerClass: 'owl-nav container',
+	autoplay: true,
+	autoplayTimeout: 3000
+	});
+
+	$("#partner-carousel").owlCarousel({
+	loop:true,
+	margin: 15,
+	nav: false,
+	items: 3,
+	dots: true,
+	nav: false,
+	autoplay: true,
+	autoplayTimeout: 3000,
+	dotsClass: 'owl-dots partner__slider-dots',
+	dotClass: 'owl-dot partner__slider-dot',
+	responsive: {
+		768: {
+			items: 2
+		},
+		1025: {
+			items: 3
+		}
+	}
 	});
 
 	// Page "Front"

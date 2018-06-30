@@ -18,7 +18,18 @@ if ( ! class_exists( 'Timber' ) ) {
 }
 
 show_admin_bar( false );
-
+function acf_change_icon_on_files ( $icon, $mime, $attachment_id ){ // Display thumbnail instead of document.png
+		
+		if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/wp-admin/upload.php' ) === false && $mime === 'application/pdf' ){
+			$get_image = wp_get_attachment_image_src ( $attachment_id, 'thumbnail' );
+			if ( $get_image ) {
+				$icon = $get_image[0];
+			} 
+		}
+		return $icon;
+	}
+	
+	add_filter( 'wp_mime_type_icon', 'acf_change_icon_on_files', 10, 3 );
 
 Timber::$dirname = array('templates', 'views');
 
@@ -38,7 +49,7 @@ class StarterSite extends TimberSite {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
-		add_filter('upload_mimes', array($this, 'cc_mime_types'));
+		add_filter('upload_mimes', array($this, 'cc_mime_types'), 1, 1);
 		add_action( 'widgets_init', array($this, 'register_my_widgets') );
 
 
@@ -106,6 +117,7 @@ class StarterSite extends TimberSite {
 
 	function cc_mime_types($mimes) {
 		$mimes['svg'] = 'image/svg+xml';
+		$mimes['pdf'] = 'application/pdf';
 		return $mimes;
 	}
 

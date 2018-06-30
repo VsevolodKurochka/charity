@@ -1,6 +1,6 @@
 <section class="section">
 	<div class="container">
-		<div class="row">
+		<div class="owl-carousel partner__slider" id="partner-carousel">
 			{% for p in post.get_field('partner') %}
 				{{ siteMacros.partner(p.image, p.name) }}
 			{% endfor %}

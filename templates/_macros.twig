@@ -61,7 +61,7 @@
 {% endmacro %}
 
 {% macro partner(image, name) %}
-	<div class="partner-item col-12 col-sm-6 col-md-4">
+	<div class="partner-item">
 		<div class="partner-item__inner">
 			<div class="partner-item__header">
 				<img src="{{image}}" alt="{{name}}" class="partner-item__image">
@@ -85,31 +85,37 @@
 	<a href="{{link}}" class="btn btn_lg btn_brand-1 btn_shadow-brand-1 effect {{effect}}">{{text}}</a>
 {% endmacro %}
 
+{% macro shareButton(link) %}
+	<div class="article-item__share fb-share-button" data-href="{{link}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Поделиться</a></div>
+{% endmacro %}
+
 {% macro article(article, thumbnailDefault) %}
 	{% import _self as macros %}
 	{% if article.thumbnail.src %}
-		{% set url = article.thumbnail.src|resize(370, 170) %}
+		{% set image = article.thumbnail.src|resize(370, 170) %}
 	{% else %}
-		{% set url = thumbnailDefault %}
+		{% set image = thumbnailDefault %}
 	{% endif %}
-	<article class="article-item">
-		<a href="{{article.link}}" class="article-item__link row">
-			<div class="article-item__header col-12 col-sm-5">
-				
-				<div class="article-item__image-wrapper">
-					<img src="{{url}}" alt="{{title}}" class="article-item__image">
-				</div>
+	<article class="article-item row">
+		<div class="article-item__header col-12 col-sm-5">
+			<div class="article-item__image-wrapper">
+				<a href="{{article.link}}" class="article-item__link ">
+					<img src="{{image}}" alt="{{title}}" class="article-item__image">
+				</a>
 			</div>
-			<div class="article-item__body col-12 col-sm-7">
-				<p class="article-item__title">{{article.title}}</p>
-				<div class="article-item__info">
-					<span class="article-item__categories">{% for category in article.categories %}{{category}}{% endfor %}</span>
-					<span class="article-item__date">{{ article.post_date|date('F j, Y') }}</span>
-				</div>
-				<div class="article-item__description">
-					{{article.preview.read_more('').end('').length(20)}}
-				</div>
+		</div>
+		<div class="article-item__body col-12 col-sm-7">
+			<a href="{{article.link}}" class="article-item__link article-item__title">{{article.title}}</a>
+			<div class="article-item__info">
+				<span class="article-item__categories">{% for category in article.categories %}{{category}}{% endfor %}</span>
+				<span class="article-item__date">{{ article.post_date|date('F j, Y') }}</span>
 			</div>
-		</a>
+			<div class="article-item__description">
+				{{article.preview.read_more('').end('').length(20)}}
+			</div>
+			<div class="article-item__footer">
+				{{macros.shareButton(article.link)}}
+			</div>
+		</div>
 	</article>
 {% endmacro %}

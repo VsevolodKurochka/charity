@@ -1,0 +1,11 @@
+<section class="section reports">
+	<div class="container">
+		<ul class="reports__list list list_rectangle">
+			{% for report in post.get_field('reports') %}
+				<li class="reports__list-item">
+					<a class="reports__list-item-link" href="{{report.file}}" target="_blank">{{report.text}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
