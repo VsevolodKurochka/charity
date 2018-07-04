@@ -1,0 +1,22 @@
+.front-instagram
+	margin-bottom: 0
+	font-size: 0
+
+	&__carousel
+
+		a
+			display: block
+			+relative()
+			+transition()
+
+			&:before
+				content: ""
+				+absolute(0, null, null, 0)
+				+size(100%)
+				background-color: transparentize($color-brand-2, 0.3)
+				opacity: 0
+				+transition()
+
+			&:hover
+				&:before
+					opacity: 1

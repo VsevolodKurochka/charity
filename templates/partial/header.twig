@@ -9,7 +9,7 @@
 {% if post.get_field('custom_title') %}
 	{% set title = post.get_field('custom_title') %}
 {% elseif function('is_post_type_archive') %}
-	{% set title = function('post_type_archive_title') %}
+	{% set title = function('post_type_archive_title', "", false) %}
 {% else %}
 	{% set title = post.title %}
 {% endif %}
