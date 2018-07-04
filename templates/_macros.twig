@@ -1,27 +1,32 @@
-{% macro string(RU, EN) %}
-{% if function('get_locale') == "ru_RU" %}{{RU}}{% else %}{{EN}}{% endif %}
+{% macro shareButton(link) %}
+	<div class="fb-share-button" data-href="{{link}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Поделиться</a></div>
 {% endmacro %}
-{% macro case(caseClass, thumbnail, title, age, city, description, link) %}
+
+{% macro string(RU, EN) %}
+	{% if function('get_locale') == "ru_RU" %}{{RU}}{% else %}{{EN}}{% endif %}
+{% endmacro %}
+
+{% macro case(caseClass, case) %}
 	{% import _self as macros %}
 	<div class="case {{caseClass}}">
-		<a href="{{link}}" class="case__link">
-			<div class="case__header">
-				<img src="{{TimberImage(thumbnail).src}}" alt="{{title}}" class="case__image">
+		<div class="case__header">
+			<a href="{{case.link}}">
+				<img src="{{TimberImage(case.thumbnail).src}}" alt="{{case.title}}" class="case__image">
+			</a>
+		</div>
+		<div class="case__content">
+			<a href="{{case.link}}" class="case__link case__title">{{case.title}}</a>
+			<div class="case__info">
+				<p>{{case.age}} {{macros.string('лет', 'age')}}</p>
+				<p>{{case.city}}</p>
 			</div>
-			<div class="case__content">
-				<p class="case__title">{{title}}</p>
-				<div class="case__info">
-					<p>{{age}} {{macros.string('лет', 'age')}}</p>
-					<p>{{city}}</p>
-				</div>
-				<div class="case__description">
-					{{description}}
-				</div>
-				<div class="case__footer">
-					<span href="{{link}}" class="case__read">{{macros.string('Помочь', 'Help')}}</span>
-				</div>
+			<div class="case__description">
+				{{case.description}}
 			</div>
-		</a>
+			<div class="case__footer">
+				<a href="{{case.link}}" class="case__read">{{macros.string('Помочь', 'Help')}}</a>
+			</div>
+		</div>
 	</div>
 {% endmacro %}
 
@@ -85,9 +90,7 @@
 	<a href="{{link}}" class="btn btn_lg btn_brand-1 btn_shadow-brand-1 effect {{effect}}">{{text}}</a>
 {% endmacro %}
 
-{% macro shareButton(link) %}
-	<div class="article-item__share fb-share-button" data-href="{{link}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Поделиться</a></div>
-{% endmacro %}
+
 
 {% macro article(article, thumbnailDefault) %}
 	{% import _self as macros %}
@@ -114,7 +117,9 @@
 				{{article.preview.read_more('').end('').length(20)}}
 			</div>
 			<div class="article-item__footer">
-				{{macros.shareButton(article.link)}}
+				<div class="article-item__share">
+					{{macros.shareButton(article.link)}}
+				</div>
 			</div>
 		</div>
 	</article>

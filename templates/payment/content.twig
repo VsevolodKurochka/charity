@@ -1,18 +1,30 @@
-{% if TimberImage(post.thumbnail).src %}
+{% if post.get_field('bg') %}
+	{% set url = post.get_field('bg') %}
+{% elseif TimberImage(post.thumbnail).src  %}
 	{% set url = TimberImage(post.thumbnail).src %}
 {% else %}
 	{% set url = "#{theme.link}/static/build/img/bg-ch1.jpg" %}
 {% endif %}
+
+{% if function('is_singular', 'children') %}
+	{% set content = siteMacros.titleSection(siteMacros.string("Помогите мне", "Help me")) %}
+	{% set formId = "2" %}
+{% else %}
+	{% set content = post.content %}
+	{% set formId = post.get_field('shortcode_id') %}
+{% endif %}
+
+
 <section class="payment" style="background-image: url({{url}})">
 	<div class="container">
 		<div class="row payment__row">
 			<div class="col-12 col-sm-10 col-md-8 col-lg-6">
 				<div class="payment__content">
 					<div class="payment__content-header">
-						{{post.content}}
+						{{content}}
 					</div>
 					<div class="payment__content-body">{{
-						function('do_shortcode', '[gravityform id='"#{post.get_field('shortcode_id')}"' title="false" description="false" ajax="true"]')
+						function('do_shortcode', '[gravityform id='"#{formId}"' title="false" description="false" ajax="true"]')
 					}}</div>
 				</div>
 			</div>
