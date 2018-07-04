@@ -1,31 +1,84 @@
-+b("front-contact")
-	position: relative
+.front-contact
+	+relative()
+	+padding-y(45px)
 	z-index: 1
 	background-color: $color-brand-4
 
 	+min(sm)
-		+padding-y(200px)
+		+padding-y(60px)
 
-	&__map
-		+max(sm)
-			height: 500px
-			width: 100%
+	&__row
 
 		+min(sm)
-			position: absolute
-			left: 0
-			top: 0
-			+size(100%)
+			justify-content: center
+
+	&__carousel
+
+		a
+			display: block
+			font-size: 0
+			+relative()
+			+transition()
+
+			&:before,
+			&:after
+				
+				+absolute(null, null, null, 0)
+				opacity: 0
+				+transition()
+
+			&:before
+				content: ""
+				top: 0
+				+size(100%)
+				background-color: transparentize($color-brand-2, 0.3)
+				
+
+			&:after
+				content: "LifeChanger"
+				width: 100%
+				
+				top: 50%
+				transform: translateY(-50%)
+
+				color: $color-white
+				text-transform: uppercase
+				font-size: 20px
+				text-align: center
+				+font('b')
+
+				z-index: 1
+		
+			&:hover
+				&:before,
+				&:after
+					opacity: 1
+
+		.owl-dots
+			margin-top: 15px
+			text-align: center
+
+		.owl-dot
+			display: inline-block
+			+size(15px)
+			background-color: $color-brand-1
+			margin-right: 5px
+			border-radius: 100%
+			border: none
+
+			outline: none
+			+transition()
+			
+			&.active,
+			&:hover
+				background-color: $color-brand-2
+
 	&__info
 		position: relative
 		z-index: 2
 		background-color: #fff
 		box-shadow: 0px 13px 50px 0px rgba(0, 0, 0, 0.2)
-
 		padding: 30px
-		+min(sm)
-			width: 450px
-			margin-left: 10%
 
 		&-title
 			+font('b')
@@ -71,7 +124,7 @@
 				color: $color-brand-1
 			
 			+min(md)
-				font-size: 24px
+				font-size: 21px
 
 		&-social
 

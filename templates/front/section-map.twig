@@ -1,30 +1,59 @@
 <section class="front-contact">
-  <div class="front-contact__map" id="map">
-  </div>
-  <div class="front-contact__info">
-    <p class="front-contact__info-title"><span class="front-color-brand-2">LifeChanger FSU</p>
-    <div class="front-contact__info-subtitle">{{options.address}}</div>
-    <div class="front-contact__info-part front-contact__info-part_phone">
-      {% for phone in options.phones %}
-        <a class="front-contact__info-link" href="tel: {{phone.phone}}">{{phone.phone}}</a>
-      {% endfor %}
-    </div>
-    <div class="front-contact__info-part front-contact__info-part_email">
-      {% for email in options.emails %}
-        <a class="front-contact__info-link" href="mailto: {{email.email}}">{{email.email}}</a>
-      {% endfor %}
-    </div>
+	<div class="container">
+		<div class="row front-contact__row">
+			<div class="col-12 col-sm-8 col-md-6 col-lg-5">
+				<div class="front-contact__info">
+					<p class="front-contact__info-title"><span class="front-color-brand-2">LifeChanger FSU</p>
+					<div class="front-contact__info-subtitle">{{options.address}}</div>
+					<div class="front-contact__info-part front-contact__info-part_phone">
+						{% for phone in options.phones %}
+							<a class="front-contact__info-link" href="tel: {{phone.phone}}">{{phone.phone}}</a>
+						{% endfor %}
+					</div>
+					<div class="front-contact__info-part front-contact__info-part_email">
+						{% for email in options.emails %}
+							<a class="front-contact__info-link" href="mailto: {{email.email}}">{{email.email}}</a>
+						{% endfor %}
+					</div>
 
-    <ul class="front-contact__info-part front-contact__info-social">
-      {% for social in options.social %}
-        <li class="front-contact__info-social-item">
-          <a href={{social.link}} class="front-contact__info-link front-contact__info-social-link">
-            <img class="front-contact__info-social-image" src="{{social.icon_color}}" alt="Social link">
-            <span class="front-contact__info-social-title">{{social.name}}</span>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-
-  </div>
+					<ul class="front-contact__info-part front-contact__info-social">
+						{% for social in options.social %}
+							<li class="front-contact__info-social-item">
+								<a href={{social.link}} class="front-contact__info-link front-contact__info-social-link">
+									<img class="front-contact__info-social-image" src="{{social.icon_color}}" alt="Social link">
+									<span class="front-contact__info-social-title">{{social.name}}</span>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="col-12 col-sm-4 col-md-6 col-lg-5">
+				{{siteMacros.titleSection(post.get_field('section_instagram_title'))}}
+				<div id="instafeed" class="owl-carousel front-contact__carousel"></div>
+				<script>
+					document.addEventListener("DOMContentLoaded", function(){
+						var userFeed = new Instafeed({
+							get: 'user',
+							userId: '8142711229',
+							accessToken: '8142711229.77141bc.f14a9413f5104e47872f66a0118a78fa',
+							resolution: "standard_resolution",
+							limit: "6",
+							after: function(){
+								jQuery("#instafeed").owlCarousel({
+									items: 1,
+									loop: true,
+									margin: 0,
+									dots: true,
+									nav: false,
+								});
+							}
+						});
+						userFeed.run();
+					});
+				</script>
+			</div>
+		</div>
+	</div>
+	
 </section>

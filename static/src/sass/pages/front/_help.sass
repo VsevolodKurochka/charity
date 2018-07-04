@@ -1,12 +1,18 @@
 .front-help
 
 	&__item
+
+		+relative()
 		
 		&:not(:last-child)
 			margin-bottom: 30px
 
 		&-content
 			margin-bottom: 20px
+			font-size: 16px
+
+			+min(md)
+				min-height: 180px
 		
 		&-header
 			+relative()
