@@ -1,5 +1,36 @@
 +b('motivation')
 
+	+relative()
+
+	+e('content')
+		+absolute(null, null, 0, 0)
+		+padding-y(15px)
+		width: 100%
+		background-color: transparentize($color-brand-2, 0.2)
+		z-index: 1
+		
+
+		+ee('title')
+			border-left: 2px solid $color-white
+			padding-left: 15px
+
+			font-size: 19px
+
+			color: #fff
+			+font('b')
+			line-height: 1.2
+
+			+min(md)
+				font-size: 22px
+
+			+min(lg)
+				padding-left: 30px
+				border-left-width: 5px
+				max-width: 80%
+				+margin-x(auto)
+
+				font-size: 25px
+
 	+e('slider')
 
 		+ee('item')
@@ -10,35 +41,10 @@
 			height: 400px
 
 			+min(md)
+				min-height: 400px
 				height: 100vh
 				
-			+ee('info')
-				+absolute(null, null, 0, 0)
-				+padding-y(15px)
-				width: 100%
-				background-color: transparentize($color-brand-2, 0.2)
-				z-index: 1
-				font-size: 19px
-
-				color: #fff
-				+font('b')
-				line-height: 1.2
-
-				+min(md)
-					font-size: 22px
-
-				+min(lg)
-					font-size: 25px
-
-			+ee('title')
-				border-left: 2px solid $color-white
-				padding-left: 15px
-				+min(lg)
-					padding-left: 30px
-					border-left-width: 5px
-					max-width: 80%
-					+margin-x(auto)
-
+		
 		.owl
 
 			&-nav

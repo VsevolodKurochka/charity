@@ -1,15 +1,12 @@
 <section class="motivation">
 	<div id="motivation-slider" class="motivation__slider owl-carousel">
 		{% for slide in post.get_field('section_motivation_slider') %}
-			<div class="motivation__slider-item" style="background-image: url({{slide.image}})">
-				<div class="motivation__slider-item-info">
-					<div class="container">
-						<div class="motivation__slider-item-title">
-							{{slide.text}}
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="motivation__slider-item" style="background-image: url({{slide.image}})"></div>
 		{% endfor %}
+	</div>
+	<div class="motivation__content">
+		<div class="container">
+			<div class="motivation__content-title">{{ post.get_field('section_slider_title') }}</div>
+		</div>
 	</div>
 </section>
