@@ -2,11 +2,12 @@
 	<div class="container">
 		{{siteMacros.titleSection(post.get_field('section_children_title'))}}
 		<div class="row front-section-children__row">
-			{% for child in post.get_field('section_children_cases') %}
+			{% for child in main_children %}
 				{{
 					siteMacros.case(
 					'col-12 col-sm-6 col-md-3',
-					child
+					child,
+					siteMacros.string('Помочь', 'Help')
 					) 
 				}}
 			{% endfor %}

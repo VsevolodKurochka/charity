@@ -76,20 +76,14 @@
 	&__info
 		position: relative
 		z-index: 2
-		background-color: #fff
-		box-shadow: 0px 13px 50px 0px rgba(0, 0, 0, 0.2)
-		padding: 30px
 
 		&-title
 			+font('b')
-			font-size: 22px
-			margin-bottom: 30px
-			line-height: 1.1
-			+min(sm)
-				font-size: 36px
+			margin-bottom: 45px
 
 		&-subtitle
-			margin-bottom: 20px
+			font-size: 17px
+			margin-bottom: 15px
 
 		&-part
 			position: relative
@@ -101,7 +95,7 @@
 				transform: translateY(-50%)
 
 			&:not(:last-child)
-				margin-bottom: 30px
+				margin-bottom: 20px
 
 			&_phone
 				&:before
@@ -122,9 +116,6 @@
 
 			&:hover
 				color: $color-brand-1
-			
-			+min(md)
-				font-size: 21px
 
 		&-social
 
@@ -133,7 +124,7 @@
 				list-style: none
 
 				&:not(:last-child)
-					margin-bottom: 30px
+					margin-bottom: 20px
 
 			&-image
 				+absolute(50%, null, null, -47px)

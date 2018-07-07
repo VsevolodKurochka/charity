@@ -1,0 +1,25 @@
+<section class="section main-children-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<div class="main-children-single__header">
+					<h1 class="title-md">{{post.title}}</h1>
+					<p>{{post.get_field('age')}} {{siteMacros.string('лет', 'age')}}</p>
+					<p>{{post.get_field('city')}}</p>
+				</div>
+				<article class="article {{post.class}}" id="{{post.id}}">
+					<div class="article__content">
+						{{post.get_field('main_content')}}
+					</div>
+				</article>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="form-general main-children-single__form">
+					{{
+						function('do_shortcode', '[gravityform id="4" title="false" description="false" ajax="true"]')
+					}}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

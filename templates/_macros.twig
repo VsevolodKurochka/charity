@@ -6,7 +6,7 @@
 	{% if function('get_locale') == "ru_RU" %}{{RU}}{% else %}{{EN}}{% endif %}
 {% endmacro %}
 
-{% macro case(caseClass, case) %}
+{% macro case(caseClass, case, case_read) %}
 	{% import _self as macros %}
 	<div class="case {{caseClass}}">
 		<div class="case__header">
@@ -24,7 +24,7 @@
 				{{case.description}}
 			</div>
 			<div class="case__footer">
-				<a href="{{case.link}}" class="case__read">{{macros.string('Помочь', 'Help')}}</a>
+				<a href="{{case.link}}" class="case__read">{{case_read}}</a>
 			</div>
 		</div>
 	</div>
