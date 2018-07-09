@@ -11,12 +11,18 @@
 		@extend %billing-center
 
 	&__image
-		height: 75px
+		height: 40px
+
+		+min(md)
+			height: 75px
 
 	&__title
 		margin-bottom: 15px
 		+font('b')
 		@extend %billing-center
+
+		+min(sm)
+			font-size: 18px
 
 		+min(md)
 			font-size: 20px
@@ -24,5 +30,5 @@
 	&__content
 		font-size: 15px
 
-		+min(sm)
+		+min(md)
 			font-size: 17px
