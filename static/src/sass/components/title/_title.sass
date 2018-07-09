@@ -16,43 +16,40 @@ $sizes: map-merge($sizes, $title-md)
 $sizes: map-merge($sizes, $title-lg)
 
 %title-default
-  margin-top: 10px
-  margin-bottom: 15px
-  line-height: 1.2
-  font-weight: normal
+	margin-top: 10px
+	margin-bottom: 15px
+	line-height: 1.2
+	font-weight: normal
 
 +b('title')
-  &-xs
-    +fs("title-xs")
+	&-xs
+		+fs("title-xs")
 
-    @extend %title-default
+		@extend %title-default
 
-  &-sm
-    +fs("title-sm")
+	&-sm
+		+fs("title-sm")
 
-    @extend %title-default
+		@extend %title-default
 
-  &-md
-    +fs("title-md")
+	&-md
+		+fs("title-md")
 
-    @extend %title-default
+		@extend %title-default
 
-  &-lg
-    +fs("title-lg")
+	&-lg
+		+fs("title-lg")
 
-    @extend %title-default
+		@extend %title-default
 
-  &-section
-    text-transform: uppercase
-    text-align: center
-    color: $color-brand-2
-    margin-bottom: 20px
+	&-section
+		text-transform: uppercase
+		text-align: center
+		color: $color-brand-2
+		margin-bottom: 30px
 
-    +min(sm)
-      margin-bottom: 30px
+		+min(md)
+			margin-bottom: 30px
 
-    +min(md)
-      margin-bottom: 30px
-
-    strong
-      +font('b')
+		strong
+			+font('b')

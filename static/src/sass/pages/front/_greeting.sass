@@ -7,7 +7,13 @@
 
 	+e('image')
 		display: inline-block
-		+relative
+		+relative()
+
+
+		+max(sm)
+			margin-bottom: 10px
+			img
+				max-width: 250px
 
 		&:before,
 		&:after
@@ -39,5 +45,9 @@
 			animation: greeting-image-translate 10s ease -5s infinite
 
 	+e('content')
+		font-size: 15px
 		color: $color-brand-2
 		+font('b')
+
+		+min(md)
+			font-size: 20px
