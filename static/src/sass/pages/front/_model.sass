@@ -2,8 +2,7 @@
 	+margin-y(90px, -70px)
 	overflow: hidden
 
-	+min(md)
-		padding-bottom: 150px
+	padding-bottom: 150px
 
 	&__bg
 		+absolute(null, 0, 0, null)
@@ -30,6 +29,13 @@
 	&__items
 		+relative()
 		list-style: none
+
+		+min(sm)
+			+max(md)
+				display: flex
+				flex: 0 1 auto
+				flex-flow: row wrap
+				
 		+min(md)
 			min-height: 465px
 
@@ -88,6 +94,10 @@
 
 			+min(lg)
 				font-size: 40px
+
+		+min(sm)
+			+max(md)
+				flex-basis: 50%
 		
 		+min(md)
 			position: absolute
