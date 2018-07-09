@@ -4,7 +4,7 @@
 	z-index: 1
 	background-color: $color-brand-4
 
-	+min(sm)
+	+min(md)
 		+padding-y(60px)
 
 	&__row
@@ -79,11 +79,17 @@
 
 		&-title
 			+font('b')
-			margin-bottom: 45px
+			margin-bottom: 30px
+
+			+min(md)
+				margin-bottom: 45px
 
 		&-subtitle
-			font-size: 17px
+			font-size: 14px
 			margin-bottom: 15px
+
+			+min(md)
+				font-size: 17px
 
 		&-part
 			position: relative
