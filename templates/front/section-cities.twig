@@ -1,10 +1,10 @@
 <section class="section front-cities">
-	<img src="{{theme.link}}/static/build/img/ukraine.png" class="front-cities__bg">
+	<img src="{{theme.link}}/static/build/img/ukraine.jpg" class="front-cities__bg">
 	<div class="container">
 		{{ siteMacros.titleSection(post.get_field('section_basis_title')) }}
 		<div class="row">
 			{% for city in post.get_field('section_basis_cities') %}
-				<div class="front-cities__list list list_rectangle col-12 col-sm-6 col-md-3">
+				<div class="front-cities__list list list_rectangle col-12 col-sm-3">
 					{{city.list}}
 				</div>
 			{% endfor %}

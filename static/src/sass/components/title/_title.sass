@@ -5,7 +5,7 @@ $title-xs: ("title-xs": ('default': 18px, 'xs': 20px))
 $title-sm: ("title-sm": ('default': 20px, 'sm': 22px, 'md': 24px, 'lg': 26px))
 
 /// Define sizes for title-md
-$title-md: ("title-md": ('default': 24px, 'sm': 32px, 'md': 34px, 'lg': 36px))
+$title-md: ("title-md": ('default': 24px, 'sm': 26px, 'md': 30px, 'lg': 36px))
 
 /// Define sizes for title-lg
 $title-lg: ("title-lg": ('default': 45px, 'sm': 70px, 'md': 80px, 'lg': 90px))
@@ -46,7 +46,13 @@ $sizes: map-merge($sizes, $title-lg)
     text-transform: uppercase
     text-align: center
     color: $color-brand-2
-    margin-bottom: 45px
+    margin-bottom: 20px
+
+    +min(sm)
+      margin-bottom: 30px
+
+    +min(md)
+      margin-bottom: 30px
 
     strong
       +font('b')
