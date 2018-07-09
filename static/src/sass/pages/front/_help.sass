@@ -11,11 +11,16 @@
 			margin-bottom: 20px
 			font-size: 16px
 
-			+min(md)
+			+min(sm)
 				min-height: 130px
-		
+				font-size: 13px
+
+			+min(md)
+				font-size: 17px
+
 		&-header
 			+relative()
+			display: inline-block
 			font-size: 0
 			margin-bottom: 15px
 
@@ -25,21 +30,29 @@
 			justify-content: center
 			+absolute(null, null, 10px, 50%)
 			width: 90%
-			padding: 10px
+			padding: 5px
 			transform: translateX(-50%)
 			
 			+font('b')
 			text-align: center
 			background-color: $color-white
 			color: $color-brand-2
-			font-size: 20px
-			line-height: 1.2
+			line-height: 1.1
 
-			min-height: 75px
+			+min(sm)
+				font-size: 17px
+
+			+min(md)
+				padding: 10px
+				font-size: 20px
+				min-height: 75px
 
 		&-footer
 			text-align: center
 
 		&-btn
-			font-size: 11px
+			font-size: 10px
 			padding: 10px
+
+			+min(md)
+				font-size: 11px

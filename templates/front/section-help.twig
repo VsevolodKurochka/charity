@@ -3,7 +3,7 @@
 		{{siteMacros.titleSection(post.get_field('section_help_title'))}}
 		<div class="row">
 			{% for help in post.get_field('section_help_kinds') %}
-				<div class="front-help__item col-12 col-md-4">
+				<div class="front-help__item col-12 col-sm-4">
 					<div class="front-help__item-header">
 						<img src="{{help.image}}" alt="{{help.title}}">
 						<div class="front-help__item-title">{{help.title}}</div>
