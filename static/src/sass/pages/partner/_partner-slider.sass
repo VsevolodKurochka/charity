@@ -21,3 +21,38 @@
 
 			&:not(:last-child)
 				margin-right: 10px
+
+		.owl
+
+			&-nav
+				width: 100%
+				+absolute(50%, null, null, 0)
+				transform: translateY(-50%)
+
+			&-prev,
+			&-next
+				display: inline-block
+				+absolute(0)
+				+size(50px)
+				border-radius: 0
+				border: none
+				background-color: $color-brand-1
+				text-align: center
+				outline: none
+
+				+transition
+
+				&:hover
+					background-color: lighten($color-brand-1, 15%)
+				
+				span
+					+absolute(2px, null, null, 18px)
+					line-height: 1
+					font-size: 40px
+					color: $color-white
+
+			&-prev
+				left: -15px
+
+			&-next
+				right: -15px

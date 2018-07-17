@@ -3,11 +3,14 @@
 	+relative()
 
 	+e('content')
-		+absolute(null, null, 0, 0)
+		
 		+padding-y(15px)
 		width: 100%
 		background-color: transparentize($color-brand-2, 0.2)
 		z-index: 1
+
+		+min(sm)
+			+absolute(null, null, 0, 0)
 		
 
 		+ee('title')
@@ -38,7 +41,13 @@
 			+relative()
 			background-size: cover
 			background-position: center
-			height: 400px
+			height: 250px
+
+			+min(xs)
+				height: 350px
+
+			+min(sm)
+				height: 450px
 
 			+min(md)
 				min-height: 400px
