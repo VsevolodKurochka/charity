@@ -17,7 +17,6 @@ if ( ! class_exists( 'Timber' ) ) {
 	return;
 }
 
-show_admin_bar( false );
 function acf_change_icon_on_files ( $icon, $mime, $attachment_id ){ // Display thumbnail instead of document.png
 		
 		if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/wp-admin/upload.php' ) === false && $mime === 'application/pdf' ){
