@@ -12,7 +12,7 @@
 	<div class="case {{caseClass}}">
 		<div class="case__header">
 			<a href="{{case.link}}">
-				<img src="{{TimberImage(case.thumbnail).src}}" alt="{{case.title}}" class="case__image">
+				<img src="{{case.thumbnail.src|resize(500)}}" alt="{{case.title}}" class="case__image">
 			</a>
 		</div>
 		<div class="case__content">

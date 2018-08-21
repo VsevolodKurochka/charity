@@ -68,8 +68,8 @@ class StarterSite extends TimberSite {
 		register_post_type('children', array(
 			'label'  => null,
 			'labels' => array(
-				'name'               => get_locale() == 'ru_RU' ? 'Дети проекта' : 'Children of the project', // основное название для типа записи
-				'singular_name'      => get_locale() == 'ru_RU' ? 'Дети проекта' : 'Children of the project', // название для одной записи этого типа
+				'name'               => get_locale() == 'ru_RU' ? 'Наши дети' : 'Our children', // основное название для типа записи
+				'singular_name'      => get_locale() == 'ru_RU' ? 'Наши дети' : 'Our children', // название для одной записи этого типа
 				'add_new'            => 'Добавить ребенка', // для добавления новой записи
 				'add_new_item'       => 'Добавление ребенкаа', // заголовка у вновь создаваемой записи в админ-панели.
 				'edit_item'          => 'Редактирование ребенкаа', // для редактирования типа записи
@@ -79,7 +79,7 @@ class StarterSite extends TimberSite {
 				'not_found'          => 'Не найдено ребенкаа', // если в результате поиска ничего не было найдено
 				'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
 				'parent_item_colon'  => '', // для родителей (у древовидных типов)
-				'menu_name'          => get_locale() == 'ru_RU' ? 'Дети проекта' : 'Children of the project', // название меню
+				'menu_name'          => get_locale() == 'ru_RU' ? 'Наши дети' : 'Our children', // название меню
 			),
 			'description'         => '',
 			'public'              => true,
