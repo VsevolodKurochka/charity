@@ -17,7 +17,7 @@
 		<div class="case__content">
 			<a href="{{case.link}}" class="case__link case__title">{{case.title}}</a>
 			<div class="case__info">
-				<p>{{case.age}} {{macros.string('лет', 'age')}}</p>
+				<p>{{case.age}} {{function('year_text_arg', case.age)}}</p>
 				<p>{{case.city}}</p>
 			</div>
 			<div class="case__description">
