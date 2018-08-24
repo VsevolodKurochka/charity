@@ -1,0 +1,56 @@
+.wp-pagenavi
+	+relative()
+	margin-top: 45px
+
+	text-align: center
+	font-size: 25px
+	color: $color-black
+	+font('eb')
+
+	+min(lg)
+		margin-top: 60px
+
+	@at-root
+		%offset
+			margin-right: 10px
+
+	a
+		text-decoration: none
+		color: inherit
+		+transition()
+		@extend %offset
+
+		&:hover
+			color: $color-brand-1
+
+	.current
+		@extend %offset
+		color: $color-brand-1
+
+	@at-root
+		%arrow
+			+size(30px, 21px)
+			margin-top: -10.5px
+			+absolute(50%)
+			+bg('../img/pagenavi-arrow.svg')
+			font-size: 0
+			+transition()
+
+			+min(sm)
+				+size(50px, 35px)
+				margin-top: -17.5px
+
+	.previouspostslink
+		@extend %arrow
+		left: 0
+		transform: scaleX(-1)
+
+		&:hover
+			left: 5px
+
+	.nextpostslink
+		@extend %arrow
+		right: 0
+
+		&:hover
+			right: 5px
