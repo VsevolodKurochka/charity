@@ -69,4 +69,16 @@ jQuery(document).ready(function($){
 
 		});
 
+	// Page Payment
+
+		var form = $('.page-template-template-payment.locale_ru_RU form');
+
+		form.removeAttr('enctype');
+		form.removeAttr('target');
+		form.removeAttr('id');
+
+		form.attr('action', window.location.protocol + "//" + window.location.hostname + '/wp-content/themes/charity/payment-controller.php' );
+
+		form.find('.amount input').attr('name', 'amount');
+
 });	
