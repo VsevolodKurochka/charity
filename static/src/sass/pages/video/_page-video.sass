@@ -1,0 +1,22 @@
+.page-video
+	&__item
+		+offset()
+		+min(md)
+			+offset(45px)
+
+		&-iframe
+			+size(100%, 150px)
+
+			+min(sm)
+				height: 200px
+
+			+min(md)
+				height: 300px
+
+			+min(lg)
+				height: 400px
+		
+		&-title
+			font-size: 22px
+			text-align: center
+			color: #666
