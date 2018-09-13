@@ -1,0 +1,123 @@
+[23-Aug-2018 11:01:24 UTC] PHP Notice:  Undefined index: amount in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php on line 11
+[23-Aug-2018 11:01:24 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: amount is null in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:188
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php(137): LiqPay->cnb_params(Array)
+#1 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(16): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 188
+[23-Aug-2018 11:02:27 UTC] PHP Notice:  Undefined index: amount in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php on line 11
+[23-Aug-2018 11:02:27 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: amount is null in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:188
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php(137): LiqPay->cnb_params(Array)
+#1 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(16): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 188
+[23-Aug-2018 11:07:56 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(8): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:07:57 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(8): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:07:58 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(8): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:07:59 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(8): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:08:00 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(8): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:08:03 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(8): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:08:37 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(10): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:08:38 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(10): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:09:09 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(10): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:09:10 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(10): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:09:11 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(10): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:09:11 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: public_key is empty in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:61
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(10): LiqPay->__construct('', 'U7wCLtzMO3RRWVn...')
+#1 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 61
+[23-Aug-2018 11:09:24 UTC] PHP Notice:  Undefined index: amount in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php on line 11
+[23-Aug-2018 11:09:24 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: amount is null in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:188
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php(137): LiqPay->cnb_params(Array)
+#1 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(17): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 188
+[23-Aug-2018 11:09:25 UTC] PHP Notice:  Undefined index: amount in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php on line 11
+[23-Aug-2018 11:09:25 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: amount is null in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:188
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php(137): LiqPay->cnb_params(Array)
+#1 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(17): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 188
+[23-Aug-2018 11:09:43 UTC] PHP Notice:  Undefined index: amount in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php on line 9
+[23-Aug-2018 11:09:43 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: amount is null in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:188
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php(137): LiqPay->cnb_params(Array)
+#1 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(15): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 188
+[23-Aug-2018 11:09:44 UTC] PHP Notice:  Undefined index: amount in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php on line 9
+[23-Aug-2018 11:09:44 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: amount is null in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:188
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php(137): LiqPay->cnb_params(Array)
+#1 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(15): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 188
+[23-Aug-2018 11:12:41 UTC] PHP Notice:  Undefined index: amount in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php on line 10
+[23-Aug-2018 11:12:41 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: amount is null in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:188
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php(137): LiqPay->cnb_params(Array)
+#1 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(16): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 188
+[23-Aug-2018 11:12:43 UTC] PHP Notice:  Undefined index: amount in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php on line 10
+[23-Aug-2018 11:12:43 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: amount is null in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php:188
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php(137): LiqPay->cnb_params(Array)
+#1 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(16): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/liqpay/LiqPay.php on line 188
+[27-Aug-2018 09:13:02 UTC] PHP Notice:  Undefined index: amount in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php on line 13
+[27-Aug-2018 09:13:02 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: amount is null in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/payment/liqpay/LiqPay.php:188
+Stack trace:
+#0 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/payment/liqpay/LiqPay.php(137): LiqPay->cnb_params(Array)
+#1 /home/rcj3d7p21opm/public_html/wp-content/themes/charity/payment-controller.php(19): LiqPay->cnb_form(Array)
+#2 {main}
+  thrown in /home/rcj3d7p21opm/public_html/wp-content/themes/charity/modules/payment/liqpay/LiqPay.php on line 188
