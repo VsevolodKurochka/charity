@@ -71,7 +71,7 @@ jQuery(document).ready(function($){
 
 	// Page Payment
 
-		var form = $('.page-template-template-payment.locale_ru_RU form');
+		var form = $('.single-main_children.locale_ru_RU form, .page-template-template-payment.locale_ru_RU form');
 
 		form.removeAttr('enctype');
 		form.removeAttr('target');
